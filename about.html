@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Dummy Building Materials Trading LLC Dubai</title>
+  <meta name="description"
+    content="Discover Dummy Building Materials Trading LLC - over 10 years of excellence supplying certified civil, MEP, electrical, and industrial materials across Dubai and the UAE." />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CraftCombine Text & Marquee Animations -->
+  <link rel="stylesheet" href="assets/css/craft-animations.css">
+
+  <style>
+    :root {
+      --red: #e50914;
+      --red-hover: #bd0008;
+      --dark: #071322;
+      --navy: #2C3E50;
+      --white: #ffffff;
+      --muted: #dce4ee;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #2C3E50;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+    .site-header {
+      min-height: 92px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .nav-container {
+      width: min(1440px, 92%);
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-logo {
+      width: 62px;
+      height: 62px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(15px, 2vw, 30px);
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 650;
+      color: #2C3E50;
+      white-space: nowrap;
+      transition: color 0.25s ease;
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--red);
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--red);
+      border-radius: 2px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .quote-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, #f20d19, #bd0008);
+      color: #ffffff;
+      border-radius: 12px;
+      font-weight: 750;
+      font-size: 14px;
+      border: 0;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 14px rgba(229, 9, 20, 0.25);
+    }
+
+    .quote-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(229, 9, 20, 0.35);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      font-size: 26px;
+      color: #071322;
+      padding: 8px;
+    }
+
+    @media (max-width: 991px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 20px 6%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        border-top: 1px solid #f1f5f9;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 14px 0;
+        font-size: 15px;
+        border-bottom: 1px solid #f1f5f9;
+      }
+
+      .nav-links a.active::after {
+        display: none;
+      }
+    }
+
+    /* ABOUT HERO BANNER */
+    .about-hero-banner {
+      position: relative;
+      background: #071322;
+      overflow: hidden;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+    }
+
+    .about-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(90deg, rgba(7, 19, 34, 0.96) 0%, rgba(7, 19, 34, 0.88) 45%, rgba(7, 19, 34, 0.55) 75%, rgba(7, 19, 34, 0.35) 100%),
+        url('/assets/images/bannerimage.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* STAT CARD STYLING MATCHED TO USER'S SCREENSHOT */
+    .stat-card-custom {
+      position: relative;
+      background: radial-gradient(circle at top right, rgba(229, 9, 20, 0.07), transparent 70%), #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 28px 24px 24px 28px;
+      box-shadow: 0 14px 34px rgba(15, 35, 62, 0.07);
+      transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.32s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.32s ease;
+      overflow: hidden;
+    }
+
+    .stat-card-custom:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 48px rgba(15, 35, 62, 0.14);
+      border-color: rgba(229, 9, 20, 0.3);
+    }
+
+    /* Vertical pill indicator on the left side */
+    .stat-card-custom .stat-vertical-pill {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 48px;
+      border-radius: 0 6px 6px 0;
+      transition: height 0.3s ease;
+    }
+
+    .stat-card-custom:hover .stat-vertical-pill {
+      height: 72px;
+    }
+
+    .stat-pill-red {
+      background: #e50914;
+    }
+
+    .stat-pill-navy {
+      background: #071322;
+    }
+
+    /* Squircle Icon Badge */
+    .stat-icon-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      font-size: 20px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      transition: transform 0.3s ease;
+    }
+
+    .stat-card-custom:hover .stat-icon-badge {
+      transform: scale(1.1);
+    }
+
+    .stat-badge-red {
+      background: #fff0f1;
+      color: #e50914;
+      border: 1px solid rgba(229, 9, 20, 0.15);
+    }
+
+    .stat-badge-navy {
+      background: #edf2f8;
+      color: #071322;
+      border: 1px solid #dbe4ee;
+    }
+
+    /* Horizontal underline bar */
+    .stat-underline-bar {
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: #e50914;
+      border-radius: 4px;
+      margin-top: 14px;
+      transition: width 0.3s ease;
+    }
+
+    .stat-card-custom:hover .stat-underline-bar {
+      width: 60px;
+    }
+
+    /* FLOATING WHATSAPP */
+    .whatsapp-float {
+      position: fixed;
+      z-index: 40;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #13bd65;
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 50px;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.25);
+      font-size: 13px;
+      font-weight: 750;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(19, 189, 101, 0.4);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-container">
+
+      <a href="index.html" class="brand" aria-label="Dummy home">
+        <img class="brand-logo" src="images/dummy-logo.png" alt="Dummy logo"
+          onerror="this.onerror=null;this.parentElement.innerHTML='<span class=\'flex h-11 w-11 items-center justify-center rounded-xl bg-red-600 text-2xl font-black text-white shadow-md\'>D</span><div class=\'ml-3\'><div class=\'text-2xl font-extrabold text-[#071322] leading-none\'>Dummy</div><div class=\'text-[10px] font-semibold tracking-wider text-slate-500 mt-1 uppercase\'>Building Materials Trading LLC</div></div>'" />
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="quote-btn" href="contact.html">
+          Get Quote <span>→</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ================================================================= -->
+    <!-- 1. ATTRACTIVE ABOUT US BANNER (HERO SECTION)                     -->
+    <!-- ================================================================= -->
+    <section class="about-hero-banner">
+      <div class="about-hero-bg"></div>
+
+      <div class="relative z-10 mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24 w-full">
+        <div class="max-w-3xl">
+
+          <!-- Breadcrumbs -->
+          <div class="mb-6 flex items-center gap-3 text-xs font-semibold">
+            <a href="index.html" class="text-slate-300 transition hover:text-white">Home</a>
+            <span class="text-red-500">/</span>
+            <span class="text-red-400">About Us</span>
+          </div>
+
+          <!-- Eyebrow Pill Badge -->
+          <div class="mb-5 inline-flex items-center gap-2.5 rounded-full border border-red-500/30 bg-red-600/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-red-300 backdrop-blur-md">
+            <span class="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
+            Heritage &amp; Industry Leadership
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="text-4xl font-black leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Building a Legacy of
+            <span class="block text-red-500">Excellence &amp; Reliability</span>
+          </h1>
+
+          <!-- Hero Paragraph -->
+          <p class="mt-6 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
+            For more than 10 years, Dummy Building Materials Trading LLC has stood at the core of the UAE's construction revolution, providing contractors, developers, and engineers with certified civil, MEP, and industrial materials.
+          </p>
+
+          <!-- Hero CTA Actions -->
+          <div class="mt-9 flex flex-wrap items-center gap-4">
+            <a href="#stats-section"
+              class="inline-flex items-center gap-3 rounded-full bg-red-600 px-7 py-4 text-sm font-bold text-white shadow-lg shadow-red-600/30 transition hover:-translate-y-1 hover:bg-red-700">
+              Discover Our Numbers ↓
+            </a>
+
+            <a href="contact.html"
+              class="inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/10 px-7 py-4 text-sm font-bold text-white backdrop-blur-sm transition hover:border-white hover:bg-white/20">
+              Request Company Profile <span>↗</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Strip -->
+          <div class="mt-10 flex flex-wrap items-center gap-6 border-t border-white/15 pt-6 text-xs font-semibold text-slate-300">
+            <div class="flex items-center gap-2">
+              <span class="text-red-500 font-bold">✓</span> DEWA Approved
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-red-500 font-bold">✓</span> Dubai Municipality Compliant
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-red-500 font-bold">✓</span> ISO 9001:2015 Certified
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-red-500 font-bold">✓</span> Al Quoz Logistics Hub
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 2. STATS SECTION (KEPT BEAUTIFULLY UNDER THE BANNER)               -->
+    <!-- 100% Matched to User's Uploaded Screenshot                        -->
+    <!-- ================================================================= -->
+    <section id="stats-section" class="relative z-20 bg-gradient-to-b from-slate-50 via-white to-white py-14 sm:py-16 border-b border-slate-200">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+
+        <!-- Optional subtle section header for context -->
+        <div class="mb-10 text-center">
+          <div class="inline-flex items-center gap-3">
+            <span class="h-[2px] w-8 bg-red-600"></span>
+            <span class="text-xs font-extrabold uppercase tracking-[0.24em] text-red-600">Performance By The Numbers</span>
+            <span class="h-[2px] w-8 bg-red-600"></span>
+          </div>
+          <h2 class="mt-2 text-2xl font-black tracking-tight text-[#071322] sm:text-3xl">
+            Trusted by the Gulf's Foremost Contractors
+          </h2>
+        </div>
+
+        <!-- 4 Stat Cards Grid -->
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+          <!-- Card 1: 10+ Years of Standing -->
+          <article class="stat-card-custom group">
+            <!-- Vertical pill accent on the left border -->
+            <span class="stat-vertical-pill stat-pill-red"></span>
+
+            <!-- Top Squircle Icon -->
+            <span class="stat-icon-badge stat-badge-red" aria-hidden="true">
+              ✦
+            </span>
+
+            <!-- Stat Number -->
+            <div class="text-4xl sm:text-5xl font-black text-red-600 tracking-tight leading-none">
+              10+
+            </div>
+
+            <!-- Stat Label -->
+            <p class="mt-2 text-xs font-extrabold uppercase tracking-widest text-[#2C3E50]">
+              YEARS OF STANDING
+            </p>
+
+            <!-- Bottom Horizontal Underline Bar -->
+            <span class="stat-underline-bar"></span>
+          </article>
+
+          <!-- Card 2: 18,500+ Active SKUs -->
+          <article class="stat-card-custom group">
+            <!-- Vertical pill accent on the left border -->
+            <span class="stat-vertical-pill stat-pill-navy"></span>
+
+            <!-- Top Squircle Icon -->
+            <span class="stat-icon-badge stat-badge-navy" aria-hidden="true">
+              ▦
+            </span>
+
+            <!-- Stat Number -->
+            <div class="text-4xl sm:text-5xl font-black text-[#071322] tracking-tight leading-none">
+              18,500+
+            </div>
+
+            <!-- Stat Label -->
+            <p class="mt-2 text-xs font-extrabold uppercase tracking-widest text-[#2C3E50]">
+              ACTIVE SKUS
+            </p>
+
+            <!-- Bottom Horizontal Underline Bar -->
+            <span class="stat-underline-bar"></span>
+          </article>
+
+          <!-- Card 3: 99.4% On-Time Offload -->
+          <article class="stat-card-custom group">
+            <!-- Vertical pill accent on the left border -->
+            <span class="stat-vertical-pill stat-pill-red"></span>
+
+            <!-- Top Squircle Icon -->
+            <span class="stat-icon-badge stat-badge-red" aria-hidden="true">
+              ✓
+            </span>
+
+            <!-- Stat Number -->
+            <div class="text-4xl sm:text-5xl font-black text-red-600 tracking-tight leading-none">
+              99.4%
+            </div>
+
+            <!-- Stat Label -->
+            <p class="mt-2 text-xs font-extrabold uppercase tracking-widest text-[#2C3E50]">
+              ON-TIME OFFLOAD
+            </p>
+
+            <!-- Bottom Horizontal Underline Bar -->
+            <span class="stat-underline-bar"></span>
+          </article>
+
+          <!-- Card 4: 2,500+ Contractors Served -->
+          <article class="stat-card-custom group">
+            <!-- Vertical pill accent on the left border -->
+            <span class="stat-vertical-pill stat-pill-navy"></span>
+
+            <!-- Top Squircle Icon -->
+            <span class="stat-icon-badge stat-badge-navy" aria-hidden="true">
+              ◎
+            </span>
+
+            <!-- Stat Number -->
+            <div class="text-4xl sm:text-5xl font-black text-[#071322] tracking-tight leading-none">
+              2,500+
+            </div>
+
+            <!-- Stat Label -->
+            <p class="mt-2 text-xs font-extrabold uppercase tracking-widest text-[#2C3E50]">
+              CONTRACTORS SERVED
+            </p>
+
+            <!-- Bottom Horizontal Underline Bar -->
+            <span class="stat-underline-bar"></span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 3. CRAFTCOMBINE INFINITE SCROLLING TEXT TICKER MARQUEE            -->
+    <!-- ================================================================= -->
+    <div class="craft-marquee-container" aria-label="Key highlights">
+      <div class="craft-marquee-track">
+        <span class="craft-marquee-item">MILL-CERTIFIED ASTM &amp; BS REBAR</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">18,500+ ACTIVE CIVIL &amp; MEP SKUS</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">24/7 CENTRAL LOGISTICS IN AL QUOZ DUBAI</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">SAME-DAY CRANE-MOUNTED SITE DISPATCH</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">AUTHORISED SCHNEIDER, JOTUN, GROHE &amp; SIKA DISTRIBUTOR</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">DEWA &amp; DUBAI MUNICIPALITY APPROVED</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">OVER 10 YEARS OF GULF SUPPLY LEADERSHIP</span>
+        <span class="craft-marquee-sep">✦</span>
+        <!-- Duplicate for continuous infinite loop -->
+        <span class="craft-marquee-item">MILL-CERTIFIED ASTM &amp; BS REBAR</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">18,500+ ACTIVE CIVIL &amp; MEP SKUS</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">24/7 CENTRAL LOGISTICS IN AL QUOZ DUBAI</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">SAME-DAY CRANE-MOUNTED SITE DISPATCH</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">AUTHORISED SCHNEIDER, JOTUN, GROHE &amp; SIKA DISTRIBUTOR</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">DEWA &amp; DUBAI MUNICIPALITY APPROVED</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">OVER 10 YEARS OF GULF SUPPLY LEADERSHIP</span>
+        <span class="craft-marquee-sep">✦</span>
+      </div>
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- 4. COMPANY STORY & HERITAGE SECTION                               -->
+    <!-- ================================================================= -->
+    <section class="bg-white px-5 py-16 sm:px-8 lg:py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+
+        <!-- Left Narrative Column -->
+        <div>
+          <div class="mb-4 flex items-center gap-3">
+            <span class="h-0.5 w-8 bg-red-600"></span>
+            <span class="text-xs font-bold uppercase tracking-[0.24em] text-red-600">Our Heritage &amp; Vision</span>
+          </div>
+
+          <h2 class="text-3xl font-black leading-tight tracking-tight text-[#071322] sm:text-4xl lg:text-5xl">
+            Empowering UAE's Skyline With
+            <span class="text-red-600">Certified Supplies</span>
+          </h2>
+
+          <p class="mt-6 text-base leading-8 text-[#2C3E50]">
+            Headquartered strategically in Al Quoz Industrial Area, Dubai, Dummy Building Materials Trading LLC has evolved from a foundational supply venture over a decade ago into one of the United Arab Emirates' premier turnkey construction material distributors. We cater to landmark commercial towers, infrastructure mega-projects, master-planned residential communities, and specialized industrial facilities.
+          </p>
+
+          <p class="mt-4 text-base leading-8 text-[#2C3E50]">
+            We bridge premier global manufacturing brands directly with local job-sites. Every item dispatched from our warehouses adheres to ASTM, British Standard (BS), DIN, DEWA, and Dubai Municipality specifications, giving project engineers complete peace of mind.
+          </p>
+
+          <!-- Mission and Vision Cards -->
+          <div class="mt-8 grid gap-5 sm:grid-cols-2">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50/80 p-6 transition duration-300 hover:border-red-200 hover:shadow-lg">
+              <div class="mb-3 flex items-center gap-3">
+                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600 text-lg font-bold text-white shadow-md shadow-red-600/20">◎</span>
+                <h3 class="font-extrabold text-[#071322]">Our Mission</h3>
+              </div>
+              <p class="text-xs leading-6 text-[#2C3E50]">
+                To provide seamless, on-time construction and engineering material supply with certified provenance, transparent commercial terms, and dedicated technical support.
+              </p>
+            </div>
+
+            <div class="rounded-2xl border border-slate-200 bg-slate-50/80 p-6 transition duration-300 hover:border-slate-300 hover:shadow-lg">
+              <div class="mb-3 flex items-center gap-3">
+                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#071322] text-lg font-bold text-white">◉</span>
+                <h3 class="font-extrabold text-[#071322]">Our Vision</h3>
+              </div>
+              <p class="text-xs leading-6 text-[#2C3E50]">
+                To be the Gulf region's most trusted and responsive procurement partner, pioneering sustainable certified materials and digitalized site logistics.
+              </p>
+            </div>
+          </div>
+
+          <!-- Proof Badges -->
+          <ul class="mt-8 space-y-3.5 text-xs font-semibold text-[#2C3E50]">
+            <li class="flex items-start gap-3">
+              <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-600">✓</span>
+              <span>Official authorized distributor for Schneider, Jotun, Grohe, Sika, and Makita.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-600">✓</span>
+              <span>Dedicated fleet of heavy crane-mounted flatbeds and express transit vehicles.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-600">✓</span>
+              <span>Turnkey BOQ estimation and technical submittal preparation within 2 hours.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Visual Showcase -->
+        <div class="relative mx-auto w-full max-w-xl">
+          <!-- Ambient Glow Backdrop -->
+          <div class="absolute -left-4 -top-4 h-72 w-72 rounded-full bg-red-600/10 blur-3xl"></div>
+          <div class="absolute -bottom-4 -right-4 h-72 w-72 rounded-full bg-blue-600/10 blur-3xl"></div>
+
+          <!-- 30 Years Badge Floating Top-Left -->
+          <div class="absolute -left-4 -top-4 z-20 rounded-2xl bg-[#071322] px-6 py-4 text-white shadow-2xl border border-white/10 sm:-left-6 sm:-top-6">
+            <div class="flex items-center gap-3">
+              <span class="text-4xl font-black text-red-600">10+</span>
+              <span class="text-[10px] font-bold uppercase leading-4 tracking-wider text-slate-300">
+                Years of<br>Excellence
+              </span>
+            </div>
+          </div>
+
+          <!-- Main Construction Image -->
+          <img src="/assets/images/construction.jpg" alt="Dummy construction supplies and project execution"
+            class="relative z-10 h-[380px] w-full rounded-3xl object-cover shadow-2xl sm:h-[480px]" loading="lazy">
+
+          <!-- Bottom Floating Assurance Card -->
+          <div class="absolute bottom-4 left-4 right-4 z-20 flex items-center justify-between gap-3 rounded-2xl border border-slate-200/80 bg-white/95 p-4 shadow-xl backdrop-blur-md sm:bottom-6 sm:left-6 sm:right-6 sm:p-5">
+            <div>
+              <h4 class="text-sm font-black text-[#071322]">Central UAE Logistics Center</h4>
+              <p class="mt-0.5 text-xs text-[#2C3E50]">First Al Khail St, Al Quoz Industrial Area, Dubai</p>
+            </div>
+            <a href="contact.html"
+              class="shrink-0 rounded-full bg-red-600 px-4 py-2.5 text-xs font-bold text-white shadow-md shadow-red-600/25 transition hover:bg-red-700">
+              Visit Branch →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 5. STRATEGIC SUPPLY PILLARS SECTION                               -->
+    <!-- ================================================================= -->
+    <section class="bg-slate-50 px-5 py-16 sm:px-8 lg:py-24 border-t border-slate-200">
+      <div class="mx-auto max-w-7xl">
+
+        <div class="mx-auto mb-14 max-w-3xl text-center">
+          <div class="mb-4 inline-flex items-center gap-3">
+            <span class="h-0.5 w-8 bg-red-600"></span>
+            <span class="text-xs font-bold uppercase tracking-[0.24em] text-red-600">Why Contractors Choose Dummy</span>
+            <span class="h-0.5 w-8 bg-red-600"></span>
+          </div>
+
+          <h2 class="text-3xl font-black tracking-tight text-[#071322] sm:text-4xl lg:text-5xl">
+            Our Core Strategic <span class="text-red-600">Supply Pillars</span>
+          </h2>
+
+          <p class="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#2C3E50]">
+            Engineered through over a decade of ground experience to eliminate site delays, maintain cost predictability, and ensure continuous job-site workflow.
+          </p>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+          <!-- Pillar 1 -->
+          <article class="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-red-300 hover:shadow-xl">
+            <div class="absolute left-0 top-0 h-1.5 w-14 bg-red-600 transition-all duration-300 group-hover:w-full"></div>
+            <span class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-red-50 text-2xl font-black text-red-600 border border-red-100 shadow-sm">♢</span>
+            <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-red-600">Assurance First</p>
+            <h3 class="mt-2 text-xl font-black text-[#071322]">Mill-Certified Quality</h3>
+            <p class="mt-3 text-xs leading-6 text-[#2C3E50]">
+              Every batch of rebar, cement, piping, and switchgear arrives with factory heat numbers, mill test certificates, and municipality compliance documentation.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-xs text-[#2C3E50] border-t border-slate-100 pt-5">
+              <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> ASTM &amp; BS Standard Certs</li>
+              <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> DEWA &amp; DM Approved</li>
+              <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Factory Sealed Packaging</li>
+            </ul>
+          </article>
+
+          <!-- Pillar 2 -->
+          <article class="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-slate-400 hover:shadow-xl">
+            <div class="absolute left-0 top-0 h-1.5 w-14 bg-[#071322] transition-all duration-300 group-hover:w-full"></div>
+            <span class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-2xl font-black text-[#071322] border border-slate-200 shadow-sm">▣</span>
+            <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#071322]">Massive Stock Buffer</p>
+            <h3 class="mt-2 text-xl font-black text-[#071322]">120,000 Sq.Ft Warehousing</h3>
+            <p class="mt-3 text-xs leading-6 text-[#2C3E50]">
+              Multi-facility storage warehouses maintain deep reserves of high-demand civil, MEP, sanitary, and chemical supplies ready for same-day dispatch.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-xs text-[#2C3E50] border-t border-slate-100 pt-5">
+              <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> 18,500+ Stocked SKUs</li>
+              <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Crane-Equipped Yards</li>
+              <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Real-Time Stock Tracking</li>
+            </ul>
+          </article>
+
+          <!-- Pillar 3 -->
+          <article class="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-red-300 hover:shadow-xl">
+            <div class="absolute left-0 top-0 h-1.5 w-14 bg-red-600 transition-all duration-300 group-hover:w-full"></div>
+            <span class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-red-50 text-2xl font-black text-red-600 border border-red-100 shadow-sm">ϟ</span>
+            <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-red-600">Rapid Transit Fleet</p>
+            <h3 class="mt-2 text-xl font-black text-[#071322]">Crane Logistics Armada</h3>
+            <p class="mt-3 text-xs leading-6 text-[#2C3E50]">
+              Our transportation fleet includes heavy flatbed trailers, mounted hydraulic boom cranes, and express transit vans covering all 7 Emirates around the clock.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-xs text-[#2C3E50] border-t border-slate-100 pt-5">
+              <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> 4-Hour Express Drops</li>
+              <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Scheduled Night Offloads</li>
+              <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Site-Specific Boom Crane</li>
+            </ul>
+          </article>
+
+          <!-- Pillar 4 -->
+          <article class="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-slate-400 hover:shadow-xl">
+            <div class="absolute left-0 top-0 h-1.5 w-14 bg-[#071322] transition-all duration-300 group-hover:w-full"></div>
+            <span class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-2xl font-black text-[#071322] border border-slate-200 shadow-sm">♧</span>
+            <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#071322]">Engineering Desk</p>
+            <h3 class="mt-2 text-xl font-black text-[#071322]">Dedicated Project Desk</h3>
+            <p class="mt-3 text-xs leading-6 text-[#2C3E50]">
+              Contractors are paired with specialized materials engineers who review itemized BOQs, draft compliant submittal packs, and structure volume credit terms.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-xs text-[#2C3E50] border-t border-slate-100 pt-5">
+              <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> 30–60 Day Trade Credit*</li>
+              <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Fast BOQ Conversion</li>
+              <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Direct Site Engineer Visits</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 6. AUTHORISED GLOBAL MANUFACTURER PARTNERS                        -->
+    <!-- ================================================================= -->
+    <section class="bg-white px-5 py-16 sm:px-8 lg:py-24">
+      <div class="mx-auto max-w-7xl">
+
+        <div class="mb-12 text-center">
+          <div class="inline-flex items-center gap-3">
+            <span class="h-0.5 w-8 bg-red-600"></span>
+            <span class="text-xs font-bold uppercase tracking-[0.24em] text-red-600">Official Authorised Supply Partners</span>
+            <span class="h-0.5 w-8 bg-red-600"></span>
+          </div>
+          <h2 class="mt-2 text-3xl font-black tracking-tight text-[#071322] sm:text-4xl">
+            Distributing Global Quality Manufacturers
+          </h2>
+          <p class="mx-auto mt-3 max-w-xl text-sm text-[#2C3E50]">
+            Direct sourcing from world leaders guarantees 100% genuine products with manufacturer warranties.
+          </p>
+        </div>
+
+        <!-- 10 Partners Showcase Grid -->
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+
+          <div class="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50/60 p-6 text-center transition hover:-translate-y-1 hover:border-red-300 hover:bg-white hover:shadow-md">
+            <div class="text-2xl font-black text-[#071322] tracking-tighter">Schneider</div>
+            <span class="mt-1 text-[10px] font-bold uppercase tracking-wider text-red-600">Electric &amp; Switchgear</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50/60 p-6 text-center transition hover:-translate-y-1 hover:border-red-300 hover:bg-white hover:shadow-md">
+            <div class="text-2xl font-black text-[#071322] tracking-tighter">JOTUN</div>
+            <span class="mt-1 text-[10px] font-bold uppercase tracking-wider text-red-600">Decorative &amp; Protective</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50/60 p-6 text-center transition hover:-translate-y-1 hover:border-red-300 hover:bg-white hover:shadow-md">
+            <div class="text-2xl font-black text-[#071322] tracking-tighter">GROHE</div>
+            <span class="mt-1 text-[10px] font-bold uppercase tracking-wider text-red-600">Sanitaryware &amp; Fittings</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50/60 p-6 text-center transition hover:-translate-y-1 hover:border-red-300 hover:bg-white hover:shadow-md">
+            <div class="text-2xl font-black text-[#071322] tracking-tighter">SIKA</div>
+            <span class="mt-1 text-[10px] font-bold uppercase tracking-wider text-red-600">Chemicals &amp; Waterproofing</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50/60 p-6 text-center transition hover:-translate-y-1 hover:border-red-300 hover:bg-white hover:shadow-md">
+            <div class="text-2xl font-black text-[#071322] tracking-tighter">Makita</div>
+            <span class="mt-1 text-[10px] font-bold uppercase tracking-wider text-red-600">Heavy Power Tools</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50/60 p-6 text-center transition hover:-translate-y-1 hover:border-red-300 hover:bg-white hover:shadow-md">
+            <div class="text-2xl font-black text-[#071322] tracking-tighter">ABB</div>
+            <span class="mt-1 text-[10px] font-bold uppercase tracking-wider text-red-600">Industrial Controls</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50/60 p-6 text-center transition hover:-translate-y-1 hover:border-red-300 hover:bg-white hover:shadow-md">
+            <div class="text-2xl font-black text-[#071322] tracking-tighter">GEBERIT</div>
+            <span class="mt-1 text-[10px] font-bold uppercase tracking-wider text-red-600">Piping &amp; Drainage</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50/60 p-6 text-center transition hover:-translate-y-1 hover:border-red-300 hover:bg-white hover:shadow-md">
+            <div class="text-2xl font-black text-[#071322] tracking-tighter">DUCAB</div>
+            <span class="mt-1 text-[10px] font-bold uppercase tracking-wider text-red-600">Approved UAE Cables</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50/60 p-6 text-center transition hover:-translate-y-1 hover:border-red-300 hover:bg-white hover:shadow-md">
+            <div class="text-2xl font-black text-[#071322] tracking-tighter">FOSROC</div>
+            <span class="mt-1 text-[10px] font-bold uppercase tracking-wider text-red-600">Construction Solutions</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50/60 p-6 text-center transition hover:-translate-y-1 hover:border-red-300 hover:bg-white hover:shadow-md">
+            <div class="text-2xl font-black text-[#071322] tracking-tighter">MUELLER</div>
+            <span class="mt-1 text-[10px] font-bold uppercase tracking-wider text-red-600">Refrigeration Copper</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 7. PROCUREMENT CALL TO ACTION PANEL                               -->
+    <!-- ================================================================= -->
+    <section class="bg-white px-5 pb-16 sm:px-8 lg:pb-24">
+      <div class="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-[#071322] px-6 py-12 text-white sm:px-12 sm:py-16 lg:px-16 shadow-2xl">
+        <!-- Background Subtle Graphic -->
+        <div class="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-red-600/20 blur-3xl"></div>
+        <div class="absolute -left-24 -bottom-24 h-96 w-96 rounded-full bg-blue-600/15 blur-3xl"></div>
+
+        <div class="relative z-10 max-w-2xl">
+          <span class="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-wider text-red-300 backdrop-blur-md">
+            Partner With Dummy Today
+          </span>
+
+          <h2 class="mt-5 text-3xl font-black leading-tight tracking-tight sm:text-4xl lg:text-5xl text-white">
+            Ready to Streamline Your
+            <span class="block text-red-500">Project Procurement?</span>
+          </h2>
+
+          <p class="mt-5 max-w-xl text-sm sm:text-base leading-7 text-slate-300">
+            Share your Bill of Quantities (BOQ) or material schedule. Our dedicated project desk will return with certified product availability, competitive volume pricing, and site dispatch schedules.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="contact.html"
+              class="inline-flex items-center gap-3 rounded-full bg-red-600 px-7 py-4 text-sm font-bold text-white shadow-lg shadow-red-600/30 transition hover:-translate-y-1 hover:bg-red-700">
+              Request Project Quotation <span>→</span>
+            </a>
+
+            <a href="products.html"
+              class="inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-bold text-white backdrop-blur-sm transition hover:bg-white/15">
+              Explore Products Catalog
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ================================================================= -->
+  <!-- 8. FOOTER                                                         -->
+  <!-- ================================================================= -->
+  <footer class="bg-[#061426] px-5 pb-6 pt-16 text-slate-300 lg:px-8 border-t border-white/10">
+    <div class="mx-auto max-w-7xl">
+
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+
+        <!-- Column 1: Company Profile -->
+        <div>
+          <a href="index.html" class="mb-5 inline-flex items-center gap-2">
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600 text-xl font-black text-white shadow-md">D</span>
+            <span>
+              <span class="block text-xl font-extrabold leading-none text-white">Dummy</span>
+              <span class="mt-1 block text-[9px] font-semibold tracking-wider text-slate-400 uppercase">Building Materials Trading LLC</span>
+            </span>
+          </a>
+
+          <p class="text-xs leading-6 text-slate-400 mt-3">
+            A trusted Dubai supplier of certified construction materials, electrical, plumbing, sanitaryware, paints, tools, and industrial supplies with over 10 years of Gulf excellence.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="rounded bg-white/10 px-2.5 py-1.5 text-[9px] font-semibold text-white">ISO 9001 Certified</span>
+            <span class="rounded bg-white/10 px-2.5 py-1.5 text-[9px] font-semibold text-white">DEWA Approved</span>
+            <span class="rounded bg-white/10 px-2.5 py-1.5 text-[9px] font-semibold text-white">DM Compliant</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="mb-5 text-xs font-extrabold uppercase tracking-widest text-white">Quick Links</h3>
+          <ul class="space-y-3 text-xs">
+            <li><a href="index.html" class="hover:text-red-400 transition">Home</a></li>
+            <li><a href="about.html" class="text-red-400 font-bold">About Us</a></li>
+            <li><a href="products.html" class="hover:text-red-400 transition">Products Catalog</a></li>
+            <li><a href="services.html" class="hover:text-red-400 transition">Services &amp; Logistics</a></li>
+            <li><a href="blog.html" class="hover:text-red-400 transition">Blog &amp; Insights</a></li>
+            <li><a href="contact.html" class="hover:text-red-400 transition">Contact Us &amp; RFQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Core Categories -->
+        <div>
+          <h3 class="mb-5 text-xs font-extrabold uppercase tracking-widest text-white">Supply Categories</h3>
+          <ul class="space-y-3 text-xs text-slate-400">
+            <li><a href="products.html#power-tools" class="hover:text-white transition">Power Tools &amp; Machinery</a></li>
+            <li><a href="products.html#electrical" class="hover:text-white transition">Electrical &amp; Switchgear</a></li>
+            <li><a href="products.html#plumbing" class="hover:text-white transition">Sanitaryware &amp; Plumbing</a></li>
+            <li><a href="products.html#building" class="hover:text-white transition">Structural Steel &amp; Rebar</a></li>
+            <li><a href="products.html#building" class="hover:text-white transition">Paints, Adhesives &amp; Sealants</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Al Quoz Dubai -->
+        <div>
+          <h3 class="mb-5 text-xs font-extrabold uppercase tracking-widest text-white">Dubai Headquarters</h3>
+          <ul class="space-y-3.5 text-xs leading-5 text-slate-400">
+            <li class="flex items-start gap-2.5">
+              <span class="text-red-500 font-bold">⌖</span>
+              <span>First Al Khail St, Al Quoz Industrial Area, Dubai, UAE</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span class="text-red-500 font-bold">☎</span>
+              <a href="tel:+97140000000" class="hover:text-white transition">+971 4 000 0000</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span class="text-red-500 font-bold">✉</span>
+              <a href="mailto:info@dummycompany.com" class="hover:text-white transition">info@dummycompany.com</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span class="text-red-500 font-bold">⏰</span>
+              <span>Mon – Sat: 7:30 AM – 7:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-[10px] text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Dummy Building Materials Trading LLC. All rights reserved.</p>
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition">Terms of Supply</a>
+          <a href="#" class="hover:text-white transition">Site Map</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+  <a class="whatsapp-float" href="https://wa.me/971500000000" target="_blank" rel="noopener noreferrer"
+    aria-label="Chat with us on WhatsApp">
+    <span class="text-lg">◉</span>
+    <span>Chat on WhatsApp →</span>
+  </a>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Mobile navigation toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+      });
+    }
+  </script>
+
+  <!-- CraftCombine Text, Heading & Card Reveal Engine -->
+  <script src="assets/js/craft-animations.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,2847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dummy | Building Materials Supplier Dubai</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- Tailwind CSS CDN — use this for a quick prototype -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- CraftCombine Text & Marquee Animations -->
+  <link rel="stylesheet" href="assets/css/craft-animations.css">
+
+  <style>
+    .dummy-section {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .dummy-materials-bg {
+      background-image:
+        linear-gradient(90deg, #fff 0%, #fff 35%, rgba(255, 255, 255, .94) 47%, rgba(255, 255, 255, .08) 75%),
+        url('/images/dummy-hero-bg.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .dummy-legacy-bg {
+      background-image:
+        linear-gradient(90deg, #061529 0%, #061529 55%, rgba(6, 21, 41, .88) 100%),
+        url('/images/dummy-hero-bg.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .dummy-image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: repeat(2, minmax(130px, 1fr));
+      gap: 10px;
+      transform: rotate(-2deg);
+    }
+
+    .dummy-image-grid img {
+      width: 100%;
+      height: 100%;
+      min-height: 130px;
+      object-fit: cover;
+      border: 4px solid white;
+      border-radius: 16px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, .15);
+    }
+
+    .dummy-image-grid img:first-child {
+      grid-row: span 2;
+    }
+
+    @media (max-width: 767px) {
+      .dummy-materials-bg {
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, .98) 0%,
+            rgba(255, 255, 255, .94) 65%,
+            rgba(255, 255, 255, .5) 100%), url('/images/dummy-hero-bg.png');
+        background-position: center;
+      }
+
+      .dummy-image-grid {
+        transform: none;
+      }
+    }
+  </style>
+  <style>
+    :root {
+      --red: #e50914;
+      --dark: #071322;
+      --white: #fff;
+      --muted: #dce4ee;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+    .site-header {
+      min-height: 92px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .05);
+    }
+
+    .nav-container {
+      width: min(1440px, 92%);
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-logo {
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      color: var(--red);
+      font-size: clamp(22px, 2vw, 32px);
+      font-weight: 600;
+      letter-spacing: 1px;
+      line-height: 1.05;
+    }
+
+    .brand-subtitle {
+      font-size: 12px;
+      color: #111;
+      letter-spacing: 1.2px;
+      margin-top: 5px;
+    }
+
+    .brand-url {
+      color: var(--red);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(15px, 2vw, 30px);
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 650;
+      white-space: nowrap;
+      transition: color .25s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--red);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .search-btn,
+    .menu-toggle {
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      font-size: 25px;
+      padding: 8px;
+    }
+
+    .quote-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 24px;
+      background: linear-gradient(135deg, #f20d19, #bd0008);
+      color: white;
+      border-radius: 12px;
+      font-weight: 750;
+      border: 0;
+      cursor: pointer;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .quote-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px #e509143d;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      isolation: isolate;
+      overflow: hidden;
+      background: #071322 url("assets/images/bannerimage.png") center center / cover no-repeat;
+      color: white;
+    }
+
+    .hero-video-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg,
+          rgba(3, 12, 25, .95) 0%,
+          rgba(3, 15, 30, .88) 35%,
+          rgba(3, 15, 30, .58) 60%,
+          rgba(3, 15, 30, .25) 100%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 420px;
+      height: 260px;
+      background: radial-gradient(ellipse at bottom right, rgba(7, 19, 34, 0.96) 0%, rgba(7, 19, 34, 0.75) 45%, transparent 75%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* HERO BOTTOM-RIGHT LIVE CARD (Covers video corner watermark) */
+    .hero-live-card {
+      position: absolute;
+      right: 32px;
+      bottom: 24px;
+      z-index: 15;
+      width: min(340px, 92vw);
+      background: rgba(7, 19, 34, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 18px;
+      padding: 16px 18px;
+      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.55), 0 0 24px rgba(229, 9, 20, 0.15);
+      color: #ffffff;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-live-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(229, 9, 20, 0.45);
+      box-shadow: 0 20px 44px rgba(0, 0, 0, 0.65), 0 0 30px rgba(229, 9, 20, 0.25);
+    }
+
+    .live-card-badge {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 8px;
+    }
+
+    .live-pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulseGreen 2s infinite;
+    }
+
+    @keyframes pulseGreen {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(0.8); }
+    }
+
+    .live-card-tag {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #94a3b8;
+    }
+
+    .live-card-body {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .live-card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+      background: rgba(229, 9, 20, 0.15);
+      border: 1px solid rgba(229, 9, 20, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .live-card-title {
+      display: block;
+      font-size: 13px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.25;
+    }
+
+    .live-card-desc {
+      font-size: 11px;
+      color: #cbd5e1;
+      margin-top: 3px;
+      line-height: 1.35;
+    }
+
+    .live-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 10px;
+    }
+
+    .live-cert {
+      color: #e50914;
+      font-weight: 750;
+    }
+
+    .live-link {
+      color: #ffffff;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+
+    .live-link:hover {
+      color: #e50914;
+    }
+
+    @media (max-width: 767px) {
+      .hero-live-card {
+        position: static;
+        margin-top: 28px;
+        width: 100%;
+      }
+    }
+
+    .hero-container {
+      width: min(1440px, 92%);
+      margin: auto;
+      padding: 70px 0 60px;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e9edf4;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 48px;
+      height: 4px;
+      border-radius: 10px;
+      background: var(--red);
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 4.4vw, 68px);
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: #ff2634;
+    }
+
+    .hero-description {
+      max-width: 630px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #edf2f8;
+      margin-bottom: 28px;
+    }
+
+    /* BENEFITS */
+    .benefits {
+      display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+      gap: 0;
+      margin: 32px 0;
+      max-width: 690px;
+    }
+
+    .benefit {
+      flex: 1 1 135px;
+      padding: 0 18px;
+      border-right: 1px solid #ffffff45;
+      text-align: center;
+    }
+
+    .benefit:first-child {
+      padding-left: 0;
+    }
+
+    .benefit:last-child {
+      border-right: 0;
+    }
+
+    .benefit-icon {
+      width: 54px;
+      height: 54px;
+      border: 1px solid #ff2535;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 10px;
+      font-size: 24px;
+      color: white;
+    }
+
+    .benefit strong {
+      display: block;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-buttons .quote-btn {
+      border-radius: 40px;
+      min-width: 190px;
+    }
+
+    .outline-btn {
+      padding: 15px 24px;
+      border: 1px solid #ffffffa6;
+      border-radius: 40px;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 650;
+      transition: background .25s;
+    }
+
+    .outline-btn:hover {
+      background: #ffffff1c;
+    }
+
+    /* EXPERIENCE BADGE */
+    .experience-badge {
+      position: absolute;
+      top: 55px;
+      right: 4%;
+      text-align: center;
+      color: #071322;
+      text-shadow: 0 2px 12px #ffffff55;
+    }
+
+    .experience-number {
+      font-size: clamp(70px, 9vw, 135px);
+      font-weight: 900;
+      color: #e50914;
+      line-height: .9;
+      letter-spacing: -8px;
+      text-shadow: 0 5px 10px #0004;
+    }
+
+    .experience-years {
+      color: #e50914;
+      font-size: 26px;
+      font-weight: 850;
+      text-align: right;
+    }
+
+    .experience-caption {
+      font-size: clamp(20px, 2.3vw, 32px);
+      font-weight: 900;
+      margin-top: 8px;
+    }
+
+    .experience-line {
+      height: 5px;
+      width: 80%;
+      background: var(--red);
+      margin: 12px auto;
+      border-radius: 100%;
+      transform: rotate(-4deg);
+    }
+
+    /* CATEGORY STRIP */
+    .category-strip {
+      background: #071322;
+      color: white;
+      border-top: 1px solid #ffffff19;
+    }
+
+    .category-container {
+      width: min(1440px, 92%);
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      padding: 22px 0;
+    }
+
+    .category {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 8px 14px;
+      border-right: 1px solid #ffffff35;
+    }
+
+    .category:last-child {
+      border-right: 0;
+    }
+
+    .category-icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--red);
+      color: #ff3340;
+      border-radius: 50%;
+      font-size: 19px;
+      flex-shrink: 0;
+    }
+
+    .category strong {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .category small {
+      font-size: 10px;
+      color: #c3ccda;
+    }
+
+    /* WHATSAPP */
+    .whatsapp-float {
+      position: fixed;
+      z-index: 20;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #13bd65;
+      color: white;
+      padding: 12px 19px;
+      border-radius: 50px;
+      box-shadow: 0 6px 25px #0004;
+      font-size: 13px;
+      font-weight: 750;
+      transition: transform .2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-4px);
+    }
+
+    .whatsapp-icon {
+      font-size: 24px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .brand-logo {
+        width: 50px;
+        height: 50px;
+      }
+
+      .brand-subtitle,
+      .brand-url {
+        display: none;
+      }
+
+      .experience-badge {
+        right: 3%;
+        top: 35px;
+      }
+
+      .hero-content {
+        max-width: 620px;
+      }
+
+      .category-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .category:nth-child(3) {
+        border-right: 0;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        min-height: 76px;
+      }
+
+      .nav-container {
+        width: 90%;
+        gap: 10px;
+      }
+
+      .brand-name {
+        font-size: 22px;
+      }
+
+      .brand-logo {
+        width: 45px;
+        height: 45px;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        box-shadow: 0 10px 18px #00000013;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+        font-size: 15px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .nav-actions {
+        gap: 4px;
+      }
+
+      .search-btn {
+        display: none;
+      }
+
+      .nav-actions .quote-btn {
+        padding: 12px;
+        font-size: 12px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero {
+        min-height: auto;
+        background-position: 62% center;
+      }
+
+      .hero::before {
+        background: linear-gradient(90deg,
+            rgba(3, 12, 25, .96),
+            rgba(3, 12, 25, .80));
+      }
+
+      .hero-container {
+        width: 90%;
+        padding: 65px 0 48px;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+      }
+
+      .hero h1 {
+        font-size: clamp(36px, 9vw, 54px);
+        letter-spacing: -1.5px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .experience-badge {
+        position: relative;
+        top: auto;
+        right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+        text-align: left;
+        margin: 35px 0 0;
+        color: white;
+      }
+
+      .experience-number {
+        font-size: 60px;
+        letter-spacing: -3px;
+      }
+
+      .experience-years {
+        font-size: 17px;
+        text-align: left;
+      }
+
+      .experience-caption {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      .experience-line {
+        display: none;
+      }
+
+      .benefits {
+        gap: 20px 0;
+        margin: 28px 0;
+      }
+
+      .benefit {
+        flex: 0 0 50%;
+        border-right: 0;
+        padding: 0 8px;
+      }
+
+      .benefit:nth-child(odd) {
+        border-right: 1px solid #ffffff35;
+      }
+
+      .benefit:first-child {
+        padding-left: 8px;
+      }
+
+      .hero-buttons {
+        align-items: stretch;
+      }
+
+      .hero-buttons .quote-btn,
+      .outline-btn {
+        flex: 1 1 100%;
+      }
+
+      .category-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 12px 0;
+      }
+
+      .category {
+        justify-content: flex-start;
+        padding: 14px 6px;
+        border-right: 0;
+      }
+
+      .category-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+      }
+
+      .category strong {
+        font-size: 11px;
+      }
+
+      .category small {
+        font-size: 9px;
+      }
+
+      .whatsapp-float {
+        right: 14px;
+        bottom: 14px;
+        padding: 11px 15px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/text-animations.css">
+  <script src="assets/js/text-animations.js" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-container">
+
+      <a href="index.html" class="brand" aria-label="Dummy home">
+        <img class="brand-logo" src="images/dummy-logo.png" alt="Dummy logo"
+          onerror="this.onerror=null;this.parentElement.innerHTML='<span class=\'flex h-11 w-11 items-center justify-center rounded-xl bg-red-600 text-2xl font-black text-white shadow-md\'>D</span><div class=\'ml-3\'><div class=\'text-2xl font-extrabold text-[#071322] leading-none\'>Dummy</div><div class=\'text-[10px] font-semibold tracking-wider text-slate-500 mt-1 uppercase\'>Building Materials Trading LLC</div></div>'" />
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="quote-btn" href="contact.html">
+          Get Quote
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <!-- Background Video from assets -->
+      <video class="hero-video-bg" autoplay muted loop playsinline preload="auto" poster="assets/images/bannerimage.png">
+        <source src="assets/images/banner-video.mp4" type="video/mp4">
+        <source src="assets/images/Laspinas_building_materials_comm%E2%80%A6_1080p_20261027134828.mp4" type="video/mp4">
+      </video>
+
+      <div class="hero-container">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Building a stronger tomorrow
+          </div>
+
+          <h2 style="font-size: 2.5rem; line-height: 1.2; font-weight: 900; color: #fff;">
+            Best Building Materials
+            <span>Supplier in Dubai</span>
+          </h2>
+
+          <p class="hero-description">
+            With over 10 years of experience, we are a trusted building
+            materials supplier in Dubai, UAE, serving contractors and
+            homeowners through our conveniently located branches.
+            Renowned for premium products, reliable service, and deep
+            industry expertise, we deliver excellence in every solution.
+          </p>
+
+          <div class="benefits">
+            <div class="benefit">
+              <div class="benefit-icon">✓</div>
+              <strong>Premium<br>Quality Products</strong>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-icon">🚚</div>
+              <strong>Reliable<br>On-Time Delivery</strong>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-icon">★</div>
+              <strong>10+ Years<br>of Experience</strong>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-icon">⌖</div>
+              <strong>10 Branches<br>Across Dubai</strong>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a class="quote-btn" href="#contact">
+              Get Quote <span>→</span>
+            </a>
+
+            <a class="outline-btn" href="tel:+97140000000">
+              <span>☎</span> Call Us Now
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Live Logistics Hub Card (Covers bottom-right video watermark) -->
+      <div class="hero-live-card" aria-label="Dubai Central Logistics Hub">
+        <div class="live-card-badge">
+          <span class="live-pulse-dot"></span>
+          <span class="live-card-tag">CENTRAL HUB DUBAI</span>
+        </div>
+        <div class="live-card-body">
+          <div class="live-card-icon">🏗️</div>
+          <div class="live-card-info">
+            <strong class="live-card-title">Al Quoz Logistics Center</strong>
+            <p class="live-card-desc">Same-Day Crane Delivery • 24/7 Operations</p>
+          </div>
+        </div>
+        <div class="live-card-footer">
+          <span class="live-cert">✓ DEWA &amp; DM Approved</span>
+          <a href="contact.html" class="live-link">Directions ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT CATEGORIES -->
+    <section class="category-strip" id="products">
+      <div class="category-container">
+
+        <a class="category" href="#cement">
+          <div class="category-icon">▤</div>
+          <div>
+            <strong>Cement</strong>
+            <small>Strong Foundations</small>
+          </div>
+        </a>
+
+        <a class="category" href="#steel">
+          <div class="category-icon">◇</div>
+          <div>
+            <strong>Steel</strong>
+            <small>Built to Last</small>
+          </div>
+        </a>
+
+        <a class="category" href="#bricks">
+          <div class="category-icon">▦</div>
+          <div>
+            <strong>Blocks &amp; Bricks</strong>
+            <small>Durable Structures</small>
+          </div>
+        </a>
+
+        <a class="category" href="#tiles">
+          <div class="category-icon">▧</div>
+          <div>
+            <strong>Tiles &amp; Flooring</strong>
+            <small>Modern Spaces</small>
+          </div>
+        </a>
+
+        <a class="category" href="#paints">
+          <div class="category-icon">◉</div>
+          <div>
+            <strong>Paints &amp; Chemicals</strong>
+            <small>Lasting Protection</small>
+          </div>
+        </a>
+
+        <a class="category" href="#more">
+          <div class="category-icon">↗</div>
+          <div>
+            <strong>And More...</strong>
+            <small>Complete Building Solutions</small>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- CRAFTCOMBINE-STYLE SCROLLING TEXT TICKER RIBBON -->
+  <div class="craft-marquee-container" aria-label="Key highlights">
+    <div class="craft-marquee-track">
+      <span class="craft-marquee-item">MILL-CERTIFIED ASTM &amp; BS REBAR</span>
+      <span class="craft-marquee-sep">✦</span>
+      <span class="craft-marquee-item">18,500+ ACTIVE CIVIL &amp; MEP SKUS</span>
+      <span class="craft-marquee-sep">✦</span>
+      <span class="craft-marquee-item">24/7 CENTRAL LOGISTICS IN AL QUOZ DUBAI</span>
+      <span class="craft-marquee-sep">✦</span>
+      <span class="craft-marquee-item">SAME-DAY CRANE-MOUNTED SITE DISPATCH</span>
+      <span class="craft-marquee-sep">✦</span>
+      <span class="craft-marquee-item">AUTHORISED SCHNEIDER, JOTUN, GROHE &amp; SIKA DISTRIBUTOR</span>
+      <span class="craft-marquee-sep">✦</span>
+      <span class="craft-marquee-item">DEWA &amp; DUBAI MUNICIPALITY APPROVED</span>
+      <span class="craft-marquee-sep">✦</span>
+      <span class="craft-marquee-item">OVER 10 YEARS OF GULF SUPPLY LEADERSHIP</span>
+      <span class="craft-marquee-sep">✦</span>
+      <!-- Duplicate for seamless infinite loop -->
+      <span class="craft-marquee-item">MILL-CERTIFIED ASTM &amp; BS REBAR</span>
+      <span class="craft-marquee-sep">✦</span>
+      <span class="craft-marquee-item">18,500+ ACTIVE CIVIL &amp; MEP SKUS</span>
+      <span class="craft-marquee-sep">✦</span>
+      <span class="craft-marquee-item">24/7 CENTRAL LOGISTICS IN AL QUOZ DUBAI</span>
+      <span class="craft-marquee-sep">✦</span>
+      <span class="craft-marquee-item">SAME-DAY CRANE-MOUNTED SITE DISPATCH</span>
+      <span class="craft-marquee-sep">✦</span>
+      <span class="craft-marquee-item">AUTHORISED SCHNEIDER, JOTUN, GROHE &amp; SIKA DISTRIBUTOR</span>
+      <span class="craft-marquee-sep">✦</span>
+      <span class="craft-marquee-item">DEWA &amp; DUBAI MUNICIPALITY APPROVED</span>
+      <span class="craft-marquee-sep">✦</span>
+      <span class="craft-marquee-item">OVER 10 YEARS OF GULF SUPPLY LEADERSHIP</span>
+      <span class="craft-marquee-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- WHATSAPP CONTACT -->
+  <a class="whatsapp-float" href="https://wa.me/971500000000" target="_blank" rel="noopener noreferrer"
+    aria-label="Chat with us on WhatsApp">
+    <span class="whatsapp-icon">◉</span>
+    <span>Chat with us on<br>WhatsApp →</span>
+  </a>
+
+
+
+
+  <div class="dummy-section overflow-hidden">
+
+    <!-- SECTION 1: PRODUCTS & SERVICES -->
+    <section id="products" class="dummy-materials-bg relative py-16 sm:py-20 lg:py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
+
+        <!-- Left content -->
+        <div class="relative z-10">
+          <div class="mb-5 flex items-center gap-3">
+            <span class="h-1 w-10 rounded-full bg-red-600"></span>
+            <p class="text-xs font-bold uppercase tracking-[0.25em] text-slate-600">
+              Our Products & Services
+            </p>
+          </div>
+
+          <h2 class="max-w-2xl text-4xl font-black leading-tight tracking-tight text-slate-950 sm:text-5xl">
+            Complete Building Materials
+            <span class="block text-red-600">Solutions Across UAE</span>
+          </h2>
+
+          <p class="mt-6 max-w-xl text-base leading-7 text-slate-600">
+            At Dummy Building Materials, we provide a complete range of
+            construction materials and industrial supplies designed to meet
+            the demands of modern infrastructure and building projects
+            throughout the UAE.
+          </p>
+
+          <p class="mt-4 max-w-xl text-base leading-7 text-slate-600">
+            From structural building materials and electrical products to
+            plumbing solutions, sanitary ware, paints, waterproofing systems,
+            power tools, and industrial consumables, we ensure reliable supply
+            for projects of every scale.
+          </p>
+
+          <!-- Benefits -->
+          <div class="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-4">
+            <div class="border-l-2 border-red-100 pl-3">
+              <div class="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-red-50 text-xl text-red-600">
+                ✓
+              </div>
+              <h3 class="text-sm font-bold leading-5 text-slate-900">
+                Premium Quality
+              </h3>
+              <p class="mt-1 text-xs text-slate-500">Trusted products</p>
+            </div>
+
+            <div class="border-l-2 border-red-100 pl-3">
+              <div class="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-red-50 text-xl text-red-600">
+                ↗
+              </div>
+              <h3 class="text-sm font-bold leading-5 text-slate-900">
+                Fast Delivery
+              </h3>
+              <p class="mt-1 text-xs text-slate-500">Reliable service</p>
+            </div>
+
+            <div class="border-l-2 border-red-100 pl-3">
+              <div class="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-red-50 text-xl text-red-600">
+                ◈
+              </div>
+              <h3 class="text-sm font-bold leading-5 text-slate-900">
+                Wide Range
+              </h3>
+              <p class="mt-1 text-xs text-slate-500">Complete solutions</p>
+            </div>
+
+            <div class="border-l-2 border-red-100 pl-3">
+              <div class="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-red-50 text-xl text-red-600">
+                ♡
+              </div>
+              <h3 class="text-sm font-bold leading-5 text-slate-900">
+                Trusted Partner
+              </h3>
+              <p class="mt-1 text-xs text-slate-500">Customer first</p>
+            </div>
+          </div>
+
+          <!-- CTA buttons -->
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a href="#contact"
+              class="inline-flex items-center gap-3 rounded-full bg-red-600 px-7 py-4 text-sm font-bold text-white shadow-lg shadow-red-600/20 transition hover:-translate-y-1 hover:bg-red-700">
+              Get A Quote <span class="text-lg">→</span>
+            </a>
+
+            <a href="#product-categories"
+              class="inline-flex items-center gap-3 rounded-full border border-slate-300 bg-white/90 px-7 py-4 text-sm font-bold text-slate-900 transition hover:border-red-500 hover:text-red-600">
+              Explore Products <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right visual -->
+        <div class="relative mx-auto w-full max-w-xl pb-10 pt-4 lg:pb-16">
+          <div class="absolute -right-3 top-0 h-32 w-32 rounded-full bg-red-100/70 blur-3xl"></div>
+
+          <img src="/assets/images/construction.jpg" alt="Building materials and construction supplies"
+            class="relative h-[300px] w-full rounded-3xl object-cover shadow-2xl sm:h-[390px] lg:h-[440px]"
+            loading="lazy">
+
+          <!-- Experience badge -->
+          <div
+            class="absolute -bottom-2 left-3 rounded-2xl bg-red-600 px-7 py-6 text-white shadow-2xl sm:-left-5 sm:px-10 sm:py-8">
+            <p class="text-5xl font-black tracking-tight sm:text-6xl">10+</p>
+            <p class="mt-2 text-sm font-bold">Years Experience</p>
+            <p class="mt-1 text-xs text-red-100">Building trust for over 10 years</p>
+          </div>
+
+          <div
+            class="absolute right-4 top-8 rounded-full border border-white/70 bg-white/90 px-4 py-2 text-xs font-bold text-slate-800 shadow-lg">
+            Quality You Can Trust
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: OUR LEGACY -->
+    <section id="about" class="dummy-legacy-bg relative overflow-hidden py-16 text-white sm:py-20 lg:py-24">
+      <div class="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-red-600/10 blur-3xl"></div>
+      <div class="absolute -bottom-32 left-1/3 h-80 w-80 rounded-full bg-blue-400/10 blur-3xl"></div>
+
+      <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
+
+        <!-- Construction collage -->
+        <div class="relative mx-auto w-full max-w-xl">
+          <div class="absolute -left-4 -top-4 h-28 w-28 rounded-2xl border border-red-500/50"></div>
+
+          <div class="dummy-image-grid relative">
+            <img src="/assets/images/material1.png" alt="Construction materials and supplies" loading="lazy">
+
+            <img src="/assets/images/steel2.webp" alt="Steel pipes and reinforcement materials" loading="lazy"
+              onerror="this.onerror=null;this.src='/images/dummy-hero-bg.png'">
+
+            <img src="/assets/images/blockpb.jpg" alt="Bricks and masonry supplies" loading="lazy"
+              onerror="this.onerror=null;this.src='/images/dummy-hero-bg.png'">
+          </div>
+
+          <div class="relative z-10 mt-6 inline-block rounded-xl border border-white/10 bg-red-600 px-6 py-4 shadow-xl">
+            <p class="text-lg font-extrabold">Quality Materials</p>
+            <p class="text-sm text-red-100">Stronger Structures</p>
+          </div>
+        </div>
+
+        <!-- Legacy content -->
+        <div>
+          <div class="mb-5 flex items-center gap-3">
+            <span class="h-1 w-10 rounded-full bg-red-500"></span>
+            <p class="text-xs font-bold uppercase tracking-[0.25em] text-slate-300">
+              Our Legacy
+            </p>
+          </div>
+
+          <h2 class="text-3xl font-black leading-tight tracking-tight sm:text-4xl">
+            Trusted Building Materials Company in Dubai
+            <span class="text-red-500">Over 10+ Years</span>
+          </h2>
+
+          <p class="mt-6 text-base leading-7 text-slate-300">
+            Dummy Building Materials is a building materials supplier in
+            the UAE, delivering construction materials, electrical supplies,
+            plumbing products, sanitary ware, paints, hardware tools, and
+            industrial solutions for residential, commercial, and industrial
+            projects.
+          </p>
+
+          <p class="mt-4 text-base leading-7 text-slate-300">
+            Established for over 10 years, Dummy Group has built its reputation on
+            reliability, product quality, competitive pricing, and dependable
+            customer service. We support contractors, developers, retailers,
+            wholesalers, and homeowners with efficient supply solutions.
+          </p>
+
+          <!-- Stats -->
+          <div class="mt-9 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
+            <div class="rounded-xl border border-white/10 bg-white/[0.04] p-4 transition hover:border-red-500/60">
+              <p class="text-3xl font-black text-red-500">10+</p>
+              <p class="mt-2 text-sm font-bold">Years of Experience</p>
+              <p class="mt-1 text-xs text-slate-400">Proven track record</p>
+            </div>
+
+            <div class="rounded-xl border border-white/10 bg-white/[0.04] p-4 transition hover:border-red-500/60">
+              <p class="text-3xl font-black text-red-500">10</p>
+              <p class="mt-2 text-sm font-bold">Branches</p>
+              <p class="mt-1 text-xs text-slate-400">Across Dubai & UAE</p>
+            </div>
+
+            <div class="rounded-xl border border-white/10 bg-white/[0.04] p-4 transition hover:border-red-500/60">
+              <p class="text-3xl font-black text-red-500">✓</p>
+              <p class="mt-2 text-sm font-bold">Reliable Service</p>
+              <p class="mt-1 text-xs text-slate-400">Customer focused</p>
+            </div>
+
+            <div class="rounded-xl border border-white/10 bg-white/[0.04] p-4 transition hover:border-red-500/60">
+              <p class="text-3xl font-black text-red-500">★</p>
+              <p class="mt-2 text-sm font-bold">Global Brands</p>
+              <p class="mt-1 text-xs text-slate-400">Trusted products</p>
+            </div>
+          </div>
+
+          <a href="#contact"
+            class="mt-8 inline-flex items-center gap-3 rounded-full bg-red-600 px-7 py-4 text-sm font-bold text-white transition hover:-translate-y-1 hover:bg-red-700">
+            Discover Our Company <span>→</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+  </div>
+  <!---categories section-->
+  <!-- DUMMY PRODUCT CATEGORIES SECTION (100% Pixel-Matched to Reference) -->
+ 
+<!-- Product Categories Section -->
+<section class="relative overflow-hidden bg-[#faf9f7] px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+  <div class="mx-auto max-w-7xl">
+
+    <!-- Section Heading -->
+    <div class="mx-auto mb-10 max-w-4xl text-center sm:mb-12">
+      <div class="mb-4 flex items-center justify-center gap-4">
+        <span class="h-[2px] w-9 bg-red-600"></span>
+        <span class="text-xs font-bold uppercase tracking-[0.28em] text-[#173b5c] sm:text-sm">
+          Our Product Categories
+        </span>
+        <span class="h-[2px] w-9 bg-red-600"></span>
+      </div>
+
+      <h2 class="text-3xl font-extrabold leading-tight tracking-tight text-[#173b5c] sm:text-4xl md:text-5xl">
+        Building Materials for
+        <span class="block text-red-600">Every Project, Every Need</span>
+      </h2>
+
+      <p class="mx-auto mt-5 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+        We provide a wide range of high-quality construction materials and essential
+        supplies to support residential, commercial and industrial projects across the UK.
+      </p>
+    </div>
+
+    <!-- Product Cards -->
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+
+      <!-- Card 1: Building Materials -->
+      <article class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:border-red-200 hover:shadow-xl">
+
+        <div class="overflow-hidden p-2.5 pb-0">
+          <img
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=85"
+            alt="Building materials at a construction site"
+            loading="lazy"
+            class="h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-[1.03] sm:h-48"
+          >
+        </div>
+
+        <div class="flex flex-1 flex-col p-5">
+          <h3 class="text-xl font-bold tracking-tight text-[#173b5c]">
+            Building Materials
+          </h3>
+
+          <span class="mt-3 mb-3 h-0.5 w-10 bg-red-600 transition-all duration-300 group-hover:w-16"></span>
+
+          <p class="mb-5 text-sm leading-6 text-slate-600">
+            From cement and aggregates to bricks, blocks and timber, we supply premium
+            building materials for strong, durable and long-lasting structures.
+          </p>
+
+          <ul class="mb-6 space-y-2 text-sm text-slate-600">
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              Cement &amp; Aggregates
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              Bricks &amp; Blocks
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              Timber &amp; Framework
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              Steel &amp; Reinforcements
+            </li>
+          </ul>
+
+          <a href="#building-materials" class="mt-auto inline-flex w-fit items-center gap-3 rounded-full bg-red-600 px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#173b5c] focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+            View Details
+            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L13.586 10H3a1 1 0 110-2h10.586l-3.293-3.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 2: Electrical Supplies -->
+      <article class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:border-red-200 hover:shadow-xl">
+
+        <div class="overflow-hidden p-2.5 pb-0">
+          <img
+            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=85"
+            alt="Electrician working on electrical wiring"
+            loading="lazy"
+            class="h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-[1.03] sm:h-48"
+          >
+        </div>
+
+        <div class="flex flex-1 flex-col p-5">
+          <h3 class="text-xl font-bold tracking-tight text-[#173b5c]">
+            Electrical Supplies
+          </h3>
+
+          <span class="mt-3 mb-3 h-0.5 w-10 bg-red-600 transition-all duration-300 group-hover:w-16"></span>
+
+          <p class="mb-5 text-sm leading-6 text-slate-600">
+            We offer a complete range of electrical supplies, from cables and switchgear
+            to lighting and accessories, ensuring safety, reliability and performance.
+          </p>
+
+          <ul class="mb-6 space-y-2 text-sm text-slate-600">
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Cables &amp; Wiring
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Switches &amp; Switchgear
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Lighting Solutions
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Electrical Accessories
+            </li>
+          </ul>
+
+          <a href="#electrical-supplies" class="mt-auto inline-flex w-fit items-center gap-3 rounded-full bg-red-600 px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#173b5c] focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+            View Details
+            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L13.586 10H3a1 1 0 110-2h10.586l-3.293-3.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 3: Plumbing Materials -->
+      <article class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:border-red-200 hover:shadow-xl">
+
+        <div class="overflow-hidden p-2.5 pb-0">
+          <img
+            src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=800&q=85"
+            alt="Plumbing pipes and fittings"
+            loading="lazy"
+            class="h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-[1.03] sm:h-48"
+          >
+        </div>
+
+        <div class="flex flex-1 flex-col p-5">
+          <h3 class="text-xl font-bold tracking-tight text-[#173b5c]">
+            Plumbing Materials
+          </h3>
+
+          <span class="mt-3 mb-3 h-0.5 w-10 bg-red-600 transition-all duration-300 group-hover:w-16"></span>
+
+          <p class="mb-5 text-sm leading-6 text-slate-600">
+            High-quality plumbing materials and fittings for efficient water flow,
+            safe installations and long-term performance in all types of construction projects.
+          </p>
+
+          <ul class="mb-6 space-y-2 text-sm text-slate-600">
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Pipes &amp; Fittings
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Valves &amp; Taps
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Drainage Systems
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Water Heating Solutions
+            </li>
+          </ul>
+
+          <a href="#plumbing-materials" class="mt-auto inline-flex w-fit items-center gap-3 rounded-full bg-red-600 px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#173b5c] focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+            View Details
+            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L13.586 10H3a1 1 0 110-2h10.586l-3.293-3.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 4: Other Supplies -->
+      <article class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:border-red-200 hover:shadow-xl">
+
+        <div class="overflow-hidden p-2.5 pb-0">
+          <img
+            src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=85"
+            alt="Construction equipment and safety gear"
+            loading="lazy"
+            class="h-52 w-full rounded-xl object-cover transition duration-500 group-hover:scale-[1.03] sm:h-48"
+          >
+        </div>
+
+        <div class="flex flex-1 flex-col p-5">
+          <h3 class="text-xl font-bold tracking-tight text-[#173b5c]">
+            And More...
+          </h3>
+
+          <span class="mt-3 mb-3 h-0.5 w-10 bg-red-600 transition-all duration-300 group-hover:w-16"></span>
+
+          <p class="mb-5 text-sm leading-6 text-slate-600">
+            We also supply a wide range of additional construction essentials, including
+            tools, safety equipment, fixings and much more to keep your project moving forward.
+          </p>
+
+          <ul class="mb-6 space-y-2 text-sm text-slate-600">
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Hand Tools &amp; Power Tools
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Safety Equipment
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Fixings &amp; Fasteners
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-red-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Site Essentials
+            </li>
+          </ul>
+
+          <a href="#other-supplies" class="mt-auto inline-flex w-fit items-center gap-3 rounded-full bg-red-600 px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#173b5c] focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+            View Details
+            <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L13.586 10H3a1 1 0 110-2h10.586l-3.293-3.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Slider Indicators (visual only) -->
+    <div class="mt-8 flex items-center justify-center gap-2.5" aria-label="Product categories pagination">
+      <span class="h-1.5 w-10 rounded-full bg-red-600"></span>
+      <span class="h-1.5 w-10 rounded-full bg-slate-300"></span>
+      <span class="h-1.5 w-10 rounded-full bg-slate-300"></span>
+      <span class="h-1.5 w-10 rounded-full bg-slate-300"></span>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Tailwind CSS CDN: remove if already installed -->
+
+  <section class="relative isolate overflow-hidden bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+
+    <!-- Background gradients -->
+    <div class="pointer-events-none absolute -left-32 top-0 -z-10 h-72 w-72 rounded-full bg-rose-100/70 blur-3xl"></div>
+    <div class="pointer-events-none absolute -right-24 top-20 -z-10 h-80 w-80 rounded-full bg-sky-100/70 blur-3xl">
+    </div>
+    <div class="pointer-events-none absolute -bottom-32 right-0 -z-10 h-96 w-96 rounded-full bg-cyan-100/60 blur-3xl">
+    </div>
+
+    <div class="mx-auto max-w-7xl">
+
+      <!-- Section heading -->
+      <div class="mx-auto mb-14 max-w-4xl text-center">
+
+        <div
+          class="mb-5 inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white/90 px-5 py-2 shadow-md">
+          <span class="h-2 w-2 rounded-full bg-red-600"></span>
+          <span class="text-xs font-bold uppercase tracking-[0.22em] text-red-600 sm:text-sm">
+            Our Work Process
+          </span>
+        </div>
+
+        <h2 class="text-4xl font-extrabold leading-tight tracking-tight text-[#123F70] sm:text-5xl lg:text-6xl">
+          From Inquiry to Delivery,
+          <span class="mt-1 block text-red-600">We Make It Simple</span>
+        </h2>
+
+        <p class="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+          Our streamlined process ensures you get the right products,
+          on time, with complete support at every step.
+        </p>
+      </div>
+
+      <!-- Process cards -->
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-5">
+
+        <!-- STEP 1 -->
+        <article
+          class="group relative flex flex-col rounded-2xl border border-sky-100 bg-white p-5 shadow-[0_10px_35px_rgba(18,63,112,0.06)] transition-all duration-300 hover:-translate-y-2 hover:border-red-200 hover:shadow-xl sm:p-6">
+
+          <div
+            class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-rose-50 text-[#123F70] ring-4 ring-white transition-all duration-300 group-hover:bg-red-50 group-hover:ring-red-50">
+            <svg viewBox="0 0 48 48" fill="none" class="h-9 w-9" aria-hidden="true">
+              <path d="M8 10H31V29H8V10Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M13 16H26M13 21H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M17 35H35V19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M28 25H37V37H20V33" stroke="#ED1C24" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M25 31H32" stroke="#ED1C24" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <div class="mb-3 flex items-center gap-3">
+            <span
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-sm font-extrabold text-white shadow-md shadow-red-600/20">01</span>
+            <span class="h-px flex-1 bg-slate-200"></span>
+          </div>
+
+          <h3 class="min-h-[56px] text-lg font-extrabold leading-snug text-[#123F70]">
+            Consultation &amp; Requirement Analysis
+          </h3>
+
+          <p class="mt-3 flex-1 text-sm leading-6 text-slate-600">
+            We understand your project needs, budget, and timeline to suggest the best solutions.
+          </p>
+
+          <div class="mt-5 overflow-hidden rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+              alt="Architect reviewing construction plans" loading="lazy"
+              class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+        </article>
+
+        <!-- STEP 2 -->
+        <article
+          class="group relative flex flex-col rounded-2xl border border-sky-100 bg-white p-5 shadow-[0_10px_35px_rgba(18,63,112,0.06)] transition-all duration-300 hover:-translate-y-2 hover:border-red-200 hover:shadow-xl sm:p-6">
+
+          <div
+            class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 text-[#123F70] ring-4 ring-white transition-all duration-300 group-hover:bg-sky-50">
+            <svg viewBox="0 0 48 48" fill="none" class="h-9 w-9" aria-hidden="true">
+              <path d="M6 21L24 10L42 21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M10 22H38V39H10V22Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M16 28H20V33H16V28ZM28 28H32V33H28V28Z" stroke="currentColor" stroke-width="2" />
+              <path d="M20 39V33H28V39" stroke="#ED1C24" stroke-width="2.5" />
+              <path d="M18 15V7H30V15" stroke="#ED1C24" stroke-width="2.5" stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <div class="mb-3 flex items-center gap-3">
+            <span
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-sm font-extrabold text-white shadow-md shadow-red-600/20">02</span>
+            <span class="h-px flex-1 bg-slate-200"></span>
+          </div>
+
+          <h3 class="min-h-[56px] text-lg font-extrabold leading-snug text-[#123F70]">
+            Product Selection &amp; Quotation
+          </h3>
+
+          <p class="mt-3 flex-1 text-sm leading-6 text-slate-600">
+            We provide the right products from trusted brands at competitive prices with a clear quotation.
+          </p>
+
+          <div class="mt-5 overflow-hidden rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+              alt="Building materials stocked in a warehouse" loading="lazy"
+              class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+        </article>
+
+        <!-- STEP 3 -->
+        <article
+          class="group relative flex flex-col rounded-2xl border border-sky-100 bg-white p-5 shadow-[0_10px_35px_rgba(18,63,112,0.06)] transition-all duration-300 hover:-translate-y-2 hover:border-red-200 hover:shadow-xl sm:p-6">
+
+          <div
+            class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-rose-50 text-[#123F70] ring-4 ring-white transition-all duration-300 group-hover:bg-red-50">
+            <svg viewBox="0 0 48 48" fill="none" class="h-9 w-9" aria-hidden="true">
+              <rect x="10" y="12" width="28" height="30" rx="3" stroke="currentColor" stroke-width="2.5" />
+              <path d="M18 12V8H30V12" stroke="#ED1C24" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M16 21L19 24L24 18M16 31L19 34L24 28" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M27 22H33M27 32H33" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="36" cy="36" r="8" fill="#ED1C24" stroke="white" stroke-width="2" />
+              <path d="M32.5 36L35 38.5L39.5 33.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <div class="mb-3 flex items-center gap-3">
+            <span
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-sm font-extrabold text-white shadow-md shadow-red-600/20">03</span>
+            <span class="h-px flex-1 bg-slate-200"></span>
+          </div>
+
+          <h3 class="min-h-[56px] text-lg font-extrabold leading-snug text-[#123F70]">
+            Order Confirmation &amp; Preparation
+          </h3>
+
+          <p class="mt-3 flex-1 text-sm leading-6 text-slate-600">
+            Once you approve the quotation, we confirm your order and prepare your materials with care.
+          </p>
+
+          <div class="mt-5 overflow-hidden rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+              alt="Warehouse inventory and order preparation" loading="lazy"
+              class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+        </article>
+
+        <!-- STEP 4 -->
+        <article
+          class="group relative flex flex-col rounded-2xl border border-sky-100 bg-white p-5 shadow-[0_10px_35px_rgba(18,63,112,0.06)] transition-all duration-300 hover:-translate-y-2 hover:border-red-200 hover:shadow-xl sm:p-6">
+
+          <div
+            class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 text-[#123F70] ring-4 ring-white transition-all duration-300 group-hover:bg-sky-50">
+            <svg viewBox="0 0 48 48" fill="none" class="h-9 w-9" aria-hidden="true">
+              <path d="M4 14H27V34H4V14Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M27 22H36L43 29V34H27V22Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+              <circle cx="13" cy="35" r="4" fill="white" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="35" cy="35" r="4" fill="white" stroke="currentColor" stroke-width="2.5" />
+              <path d="M4 7H18M4 11H14" stroke="#ED1C24" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M31 26H36L40 30H31V26Z" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </div>
+
+          <div class="mb-3 flex items-center gap-3">
+            <span
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-sm font-extrabold text-white shadow-md shadow-red-600/20">04</span>
+            <span class="h-px flex-1 bg-slate-200"></span>
+          </div>
+
+          <h3 class="min-h-[56px] text-lg font-extrabold leading-snug text-[#123F70]">
+            Efficient Delivery
+          </h3>
+
+          <p class="mt-3 flex-1 text-sm leading-6 text-slate-600">
+            Our logistics network helps ensure reliable delivery to your site or location across the UAE.
+          </p>
+
+          <div class="mt-5 overflow-hidden rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+              alt="Commercial delivery truck on the road" loading="lazy"
+              class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+        </article>
+
+        <!-- STEP 5 -->
+        <article
+          class="group relative flex flex-col rounded-2xl border border-sky-100 bg-white p-5 shadow-[0_10px_35px_rgba(18,63,112,0.06)] transition-all duration-300 hover:-translate-y-2 hover:border-red-200 hover:shadow-xl sm:col-span-2 sm:mx-auto sm:w-full sm:max-w-[calc(50%-0.75rem)] lg:col-span-1 lg:max-w-none sm:p-6">
+
+          <div
+            class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-rose-50 text-[#123F70] ring-4 ring-white transition-all duration-300 group-hover:bg-red-50">
+            <svg viewBox="0 0 48 48" fill="none" class="h-9 w-9" aria-hidden="true">
+              <path d="M8 27V22C8 13 15 7 24 7S40 13 40 22V27" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" />
+              <rect x="5" y="21" width="8" height="14" rx="4" fill="#ED1C24" />
+              <rect x="35" y="21" width="8" height="14" rx="4" fill="#ED1C24" />
+              <path d="M39 34C39 40 33 41 26 41H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="19" cy="41" r="3" stroke="currentColor" stroke-width="2.5" />
+              <path d="M17 18C20 14 28 14 31 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <div class="mb-3 flex items-center gap-3">
+            <span
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-sm font-extrabold text-white shadow-md shadow-red-600/20">05</span>
+            <span class="h-px flex-1 bg-slate-200"></span>
+          </div>
+
+          <h3 class="min-h-[56px] text-lg font-extrabold leading-snug text-[#123F70]">
+            Ongoing Support
+          </h3>
+
+          <p class="mt-3 flex-1 text-sm leading-6 text-slate-600">
+            Our team is available to assist with product information, technical guidance, and after-sales support.
+          </p>
+
+          <div class="mt-5 overflow-hidden rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+              alt="Professional team discussing customer requirements" loading="lazy"
+              class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Bottom trust banner -->
+      <div
+        class="relative mt-12 overflow-hidden rounded-3xl border border-sky-100 bg-gradient-to-r from-sky-50 via-white to-blue-50 p-6 shadow-sm sm:p-8 lg:mt-14 lg:p-10">
+
+        <div class="pointer-events-none absolute -right-12 -top-16 h-48 w-48 rounded-full bg-sky-200/30 blur-3xl"></div>
+
+        <div class="relative grid grid-cols-2 items-center gap-7 lg:grid-cols-5 lg:gap-6">
+
+          <!-- Banner heading -->
+          <div class="col-span-2 border-l-4 border-red-600 pl-5 lg:col-span-1">
+            <h3 class="text-2xl font-extrabold leading-tight tracking-tight text-[#123F70]">
+              Built on Trust,<br>
+              Driven by Excellence
+            </h3>
+          </div>
+
+          <!-- Benefit 1 -->
+          <div class="flex flex-col items-center border-slate-200 text-center lg:border-l lg:pl-5">
+            <svg viewBox="0 0 48 48" fill="none" class="mb-3 h-10 w-10 text-[#123F70]" aria-hidden="true">
+              <path d="M24 4L40 10V22C40 32 33 39 24 44C15 39 8 32 8 22V10L24 4Z" stroke="currentColor"
+                stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M16 23L22 29L33 17" stroke="#ED1C24" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <p class="text-sm font-bold leading-5 text-[#123F70]">Quality<br>Products</p>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="flex flex-col items-center border-slate-200 text-center lg:border-l lg:pl-5">
+            <svg viewBox="0 0 48 48" fill="none" class="mb-3 h-10 w-10 text-[#123F70]" aria-hidden="true">
+              <path d="M4 14H27V34H4V14Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M27 22H36L43 29V34H27V22Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+              <circle cx="13" cy="35" r="4" fill="white" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="35" cy="35" r="4" fill="white" stroke="currentColor" stroke-width="2.5" />
+              <path d="M4 7H18" stroke="#ED1C24" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+            <p class="text-sm font-bold leading-5 text-[#123F70]">On-Time<br>Delivery</p>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="flex flex-col items-center border-slate-200 text-center lg:border-l lg:pl-5">
+            <svg viewBox="0 0 48 48" fill="none" class="mb-3 h-10 w-10 text-[#123F70]" aria-hidden="true">
+              <path d="M8 27V22C8 13 15 7 24 7S40 13 40 22V27" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" />
+              <rect x="5" y="21" width="8" height="14" rx="4" fill="#ED1C24" />
+              <rect x="35" y="21" width="8" height="14" rx="4" fill="#ED1C24" />
+              <path d="M39 34C39 40 33 41 26 41H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="19" cy="41" r="3" stroke="currentColor" stroke-width="2.5" />
+            </svg>
+            <p class="text-sm font-bold leading-5 text-[#123F70]">Expert<br>Support</p>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="flex flex-col items-center border-slate-200 text-center lg:border-l lg:pl-5">
+            <svg viewBox="0 0 48 48" fill="none" class="mb-3 h-10 w-10 text-[#123F70]" aria-hidden="true">
+              <circle cx="24" cy="13" r="6" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="10" cy="19" r="4" stroke="#ED1C24" stroke-width="2.5" />
+              <circle cx="38" cy="19" r="4" stroke="#ED1C24" stroke-width="2.5" />
+              <path d="M12 39V34C12 27 17 23 24 23S36 27 36 34V39H12Z" stroke="currentColor" stroke-width="2.5"
+                stroke-linejoin="round" />
+              <path d="M3 37V33C3 28 6 25 11 25M45 37V33C45 28 42 25 37 25" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" />
+            </svg>
+            <p class="text-sm font-bold leading-5 text-[#123F70]">Long-Term<br>Partnerships</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="relative overflow-hidden bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+
+    <!-- Soft background gradients -->
+    <div
+      class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,225,225,0.45),transparent_40%),radial-gradient(ellipse_at_top_right,rgba(215,239,235,0.5),transparent_40%)]">
+    </div>
+
+    <div class="relative mx-auto max-w-7xl">
+
+      <!-- Section Heading -->
+      <div class="mb-4 flex items-center justify-center gap-3 sm:gap-6">
+        <span class="h-[3px] w-6 shrink-0 rounded-full bg-red-600 sm:w-14"></span>
+
+        <h2
+          class="text-center text-3xl font-extrabold leading-tight tracking-tight text-[#123F70] sm:text-4xl lg:text-5xl">
+          Why Choose Us
+        </h2>
+
+        <span class="h-[3px] w-6 shrink-0 rounded-full bg-red-600 sm:w-14"></span>
+      </div>
+
+      <p class="mx-auto mb-12 max-w-2xl text-center text-sm leading-7 text-slate-600 sm:text-base">
+        Your trusted partner for quality building materials,
+        reliable service, and complete project solutions.
+      </p>
+
+      <!-- Benefits Grid -->
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+
+        <!-- Card 1 -->
+        <article
+          class="group relative rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-[0_8px_25px_rgba(18,63,112,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-red-200 hover:shadow-xl sm:p-8">
+
+          <div
+            class="absolute left-6 top-0 h-[3px] w-12 rounded-b-md bg-red-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:left-8">
+          </div>
+
+          <div
+            class="mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-full bg-gradient-to-br from-red-50 to-rose-50 text-[#123F70] transition-transform duration-300 group-hover:scale-105">
+            <svg viewBox="0 0 48 48" fill="none" class="h-10 w-10" aria-hidden="true">
+              <path d="M13 37V15L24 9L35 15V37H13Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M19 19H21M27 19H29M19 25H21M27 25H29" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" />
+              <path d="M20 37V30H28V37" stroke="currentColor" stroke-width="2.5" />
+              <path d="M24 5V12" stroke="#ED1C24" stroke-width="3" stroke-linecap="round" />
+              <path d="M32 28L36 32L43 23" stroke="#ED1C24" stroke-width="2.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <h3 class="mb-3 text-xl font-bold leading-snug tracking-tight text-[#123F70] sm:text-2xl">
+            10+ Years of Industry Experience
+          </h3>
+
+          <p class="text-sm leading-7 text-slate-600 sm:text-base">
+            With decades of expertise in the UAE market, we understand the evolving needs of construction professionals
+            and deliver solutions that support successful project execution.
+          </p>
+        </article>
+
+        <!-- Card 2 -->
+        <article
+          class="group relative rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-[0_8px_25px_rgba(18,63,112,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-red-200 hover:shadow-xl sm:p-8">
+
+          <div
+            class="absolute left-6 top-0 h-[3px] w-12 rounded-b-md bg-red-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:left-8">
+          </div>
+
+          <div
+            class="mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-full bg-gradient-to-br from-red-50 to-rose-50 text-[#123F70] transition-transform duration-300 group-hover:scale-105">
+            <svg viewBox="0 0 48 48" fill="none" class="h-10 w-10" aria-hidden="true">
+              <path d="M8 20H40V39H8V20Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M14 20V29H24V20M24 29V39M8 29H40" stroke="currentColor" stroke-width="2.5" />
+              <path d="M13 8H35V17H13V8Z" stroke="#ED1C24" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M19 12H29" stroke="#ED1C24" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M15 25H17M29 25H31M15 34H17M29 34H31" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <h3 class="mb-3 text-xl font-bold leading-snug tracking-tight text-[#123F70] sm:text-2xl">
+            Wide Product Range
+          </h3>
+
+          <p class="text-sm leading-7 text-slate-600 sm:text-base">
+            We provide a complete selection of building materials, electrical products, plumbing supplies, sanitary
+            ware, paints, tools, and industrial products under one roof.
+          </p>
+        </article>
+
+        <!-- Card 3 -->
+        <article
+          class="group relative rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-[0_8px_25px_rgba(18,63,112,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-red-200 hover:shadow-xl sm:p-8">
+
+          <div
+            class="absolute left-6 top-0 h-[3px] w-12 rounded-b-md bg-red-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:left-8">
+          </div>
+
+          <div
+            class="mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-full bg-gradient-to-br from-red-50 to-rose-50 text-[#123F70] transition-transform duration-300 group-hover:scale-105">
+            <svg viewBox="0 0 48 48" fill="none" class="h-10 w-10" aria-hidden="true">
+              <circle cx="23" cy="23" r="16" stroke="currentColor" stroke-width="2.5" />
+              <path d="M23 7C14 15 14 31 23 39M23 7C32 15 32 31 23 39M7 23H39M9 15H37M9 31H37" stroke="currentColor"
+                stroke-width="2" />
+              <path d="M34 29L39 32L45 24" stroke="#ED1C24" stroke-width="2.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <h3 class="mb-3 text-xl font-bold leading-snug tracking-tight text-[#123F70] sm:text-2xl">
+            Trusted Global Brands
+          </h3>
+
+          <p class="text-sm leading-7 text-slate-600 sm:text-base">
+            We partner with internationally recognized manufacturers to ensure consistent quality, safety, durability,
+            and performance across every product category.
+          </p>
+        </article>
+
+        <!-- Card 4 -->
+        <article
+          class="group relative rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-[0_8px_25px_rgba(18,63,112,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-red-200 hover:shadow-xl sm:p-8">
+
+          <div
+            class="absolute left-6 top-0 h-[3px] w-12 rounded-b-md bg-red-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:left-8">
+          </div>
+
+          <div
+            class="mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-full bg-gradient-to-br from-red-50 to-rose-50 text-[#123F70] transition-transform duration-300 group-hover:scale-105">
+            <svg viewBox="0 0 48 48" fill="none" class="h-10 w-10" aria-hidden="true">
+              <path d="M4 13H27V34H4V13Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M27 21H36L43 28V34H27V21Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+              <circle cx="13" cy="35" r="4" fill="white" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="35" cy="35" r="4" fill="white" stroke="currentColor" stroke-width="2.5" />
+              <path d="M3 7H19M3 11H15" stroke="#ED1C24" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M31 25H36L40 29H31V25Z" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </div>
+
+          <h3 class="mb-3 text-xl font-bold leading-snug tracking-tight text-[#123F70] sm:text-2xl">
+            Fast Delivery Across UAE
+          </h3>
+
+          <p class="text-sm leading-7 text-slate-600 sm:text-base">
+            Our strategically located branches and distribution network allow us to provide timely and reliable delivery
+            services throughout Dubai and the UAE.
+          </p>
+        </article>
+
+        <!-- Card 5 -->
+        <article
+          class="group relative rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-[0_8px_25px_rgba(18,63,112,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-red-200 hover:shadow-xl sm:p-8">
+
+          <div
+            class="absolute left-6 top-0 h-[3px] w-12 rounded-b-md bg-red-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:left-8">
+          </div>
+
+          <div
+            class="mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-full bg-gradient-to-br from-red-50 to-rose-50 text-[#123F70] transition-transform duration-300 group-hover:scale-105">
+            <svg viewBox="0 0 48 48" fill="none" class="h-10 w-10" aria-hidden="true">
+              <path d="M8 35L20 23L27 28L40 12" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M31 12H40V21" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M8 39H40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M11 33H16V39H11V33Z" fill="#ED1C24" />
+              <path d="M21 29H26V39H21V29Z" fill="#ED1C24" opacity=".8" />
+              <path d="M31 23H36V39H31V23Z" fill="#ED1C24" opacity=".65" />
+            </svg>
+          </div>
+
+          <h3 class="mb-3 text-xl font-bold leading-snug tracking-tight text-[#123F70] sm:text-2xl">
+            Competitive Pricing
+          </h3>
+
+          <p class="text-sm leading-7 text-slate-600 sm:text-base">
+            We work closely with manufacturers and suppliers to offer cost-effective solutions without compromising
+            product quality or service standards.
+          </p>
+        </article>
+
+        <!-- Card 6 -->
+        <article
+          class="group relative rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-[0_8px_25px_rgba(18,63,112,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-red-200 hover:shadow-xl sm:p-8">
+
+          <div
+            class="absolute left-6 top-0 h-[3px] w-12 rounded-b-md bg-red-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:left-8">
+          </div>
+
+          <div
+            class="mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-full bg-gradient-to-br from-red-50 to-rose-50 text-[#123F70] transition-transform duration-300 group-hover:scale-105">
+            <svg viewBox="0 0 48 48" fill="none" class="h-10 w-10" aria-hidden="true">
+              <path d="M8 26V22C8 13 15 7 24 7S40 13 40 22V26" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" />
+              <rect x="5" y="22" width="8" height="13" rx="4" fill="#ED1C24" />
+              <rect x="35" y="22" width="8" height="13" rx="4" fill="#ED1C24" />
+              <path d="M39 34C39 40 33 41 26 41H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="19" cy="41" r="3" stroke="currentColor" stroke-width="2.5" />
+              <path d="M17 18C20 14 28 14 31 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <h3 class="mb-3 text-xl font-bold leading-snug tracking-tight text-[#123F70] sm:text-2xl">
+            Expert Customer Support
+          </h3>
+
+          <p class="text-sm leading-7 text-slate-600 sm:text-base">
+            Our experienced team assists customers with product selection, project requirements, technical guidance, and
+            efficient procurement support.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="relative isolate overflow-hidden bg-white px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
+
+    <!-- Decorative Background Gradients -->
+    <div class="pointer-events-none absolute -left-24 -top-24 -z-10 h-72 w-72 rounded-full bg-rose-100/70 blur-3xl">
+    </div>
+    <div class="pointer-events-none absolute -right-24 -top-20 -z-10 h-80 w-80 rounded-full bg-sky-100/70 blur-3xl">
+    </div>
+    <div class="pointer-events-none absolute -bottom-40 right-0 -z-10 h-96 w-96 rounded-full bg-cyan-100/60 blur-3xl">
+    </div>
+
+    <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+
+      <!-- LEFT: Content -->
+      <div class="order-2 lg:order-1">
+
+        <!-- Eyebrow -->
+        <div class="mb-3 flex items-center gap-3">
+          <span class="h-[2px] w-8 rounded-full bg-red-600"></span>
+          <p class="text-xs font-bold uppercase tracking-[0.25em] text-red-600 sm:text-sm">
+            Sectors We Support
+          </p>
+        </div>
+
+        <!-- Heading -->
+        <h2
+          class="max-w-2xl text-4xl font-extrabold leading-[1.12] tracking-tight text-[#123F70] sm:text-5xl lg:text-6xl">
+          Industries We
+          <span class="relative inline-block">
+            Serve
+            <span class="absolute -bottom-2 left-0 h-1 w-16 rounded-full bg-red-600"></span>
+          </span>
+        </h2>
+
+        <!-- Description -->
+        <p class="mt-7 max-w-xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
+          We proudly supply construction materials and industrial products for a wide range of sectors, delivering
+          quality, reliability, and value for every project.
+        </p>
+
+        <!-- Industries List -->
+        <ul class="mt-7 space-y-4">
+
+          <li class="group flex items-center gap-4 text-base text-slate-700 sm:text-lg">
+            <span
+              class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+              <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" aria-hidden="true">
+                <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="transition-colors duration-200 group-hover:text-[#123F70]">Residential Projects</span>
+          </li>
+
+          <li class="group flex items-center gap-4 text-base text-slate-700 sm:text-lg">
+            <span
+              class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+              <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" aria-hidden="true">
+                <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="transition-colors duration-200 group-hover:text-[#123F70]">Commercial Buildings</span>
+          </li>
+
+          <li class="group flex items-center gap-4 text-base text-slate-700 sm:text-lg">
+            <span
+              class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+              <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" aria-hidden="true">
+                <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="transition-colors duration-200 group-hover:text-[#123F70]">Industrial Facilities</span>
+          </li>
+
+          <li class="group flex items-center gap-4 text-base text-slate-700 sm:text-lg">
+            <span
+              class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+              <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" aria-hidden="true">
+                <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="transition-colors duration-200 group-hover:text-[#123F70]">Infrastructure Projects</span>
+          </li>
+
+          <li class="group flex items-center gap-4 text-base text-slate-700 sm:text-lg">
+            <span
+              class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+              <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" aria-hidden="true">
+                <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="transition-colors duration-200 group-hover:text-[#123F70]">Hospitality Projects</span>
+          </li>
+
+          <li class="group flex items-center gap-4 text-base text-slate-700 sm:text-lg">
+            <span
+              class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+              <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" aria-hidden="true">
+                <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="transition-colors duration-200 group-hover:text-[#123F70]">Retail Fit-Outs</span>
+          </li>
+
+          <li class="group flex items-center gap-4 text-base text-slate-700 sm:text-lg">
+            <span
+              class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+              <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" aria-hidden="true">
+                <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="transition-colors duration-200 group-hover:text-[#123F70]">Government Projects</span>
+          </li>
+
+          <li class="group flex items-center gap-4 text-base text-slate-700 sm:text-lg">
+            <span
+              class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+              <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" aria-hidden="true">
+                <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="transition-colors duration-200 group-hover:text-[#123F70]">Maintenance &amp; Renovation
+              Projects</span>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- RIGHT: Image -->
+      <div class="order-1 lg:order-2">
+
+        <div class="group relative mx-auto max-w-2xl">
+
+          <!-- Soft blue frame -->
+          <div class="absolute -inset-1.5 rounded-[22px] bg-gradient-to-br from-sky-300/70 via-white to-cyan-200/80">
+          </div>
+
+          <!-- Image -->
+          <div class="relative overflow-hidden rounded-2xl bg-slate-100 shadow-[0_25px_60px_rgba(18,63,112,0.15)]">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+              alt="Construction materials and workers at a building project" loading="lazy"
+              class="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 sm:aspect-[5/4] lg:aspect-[4/3]" />
+          </div>
+
+          <!-- Image caption -->
+          <div
+            class="absolute bottom-4 left-4 right-4 rounded-xl border border-white/50 bg-white/90 p-4 shadow-lg backdrop-blur-md sm:bottom-6 sm:left-6 sm:right-auto sm:min-w-64">
+            <p class="text-xs font-semibold uppercase tracking-widest text-red-600">
+              Built on Reliability
+            </p>
+            <p class="mt-1 text-base font-bold text-[#123F70]">
+              Materials for Every Project
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <section class="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+
+    <!-- Decorative Background -->
+    <div class="pointer-events-none absolute left-0 top-56 hidden h-44 w-24 opacity-50 sm:block"
+      style="background-image:radial-gradient(#9db4cf 1.3px,transparent 1.3px);background-size:10px 10px;">
+    </div>
+
+    <div class="pointer-events-none absolute right-0 top-[520px] hidden h-44 w-24 opacity-40 sm:block"
+      style="background-image:radial-gradient(#9db4cf 1.3px,transparent 1.3px);background-size:10px 10px;">
+    </div>
+
+
+    <div class="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-10">
+
+      <!-- Section Heading -->
+      <div class="mx-auto mb-12 max-w-4xl text-center">
+
+        <span
+          class="mb-5 inline-flex items-center gap-2 rounded-full border border-red-200 bg-white px-5 py-2 text-[10px] font-bold uppercase tracking-[0.25em] text-red-600 shadow-sm sm:text-[11px]">
+          <span class="h-2 w-2 rounded-full bg-red-600"></span>
+          Client Experiences
+          <span class="h-2 w-2 rounded-full bg-red-600"></span>
+        </span>
+
+        <h2 class="text-4xl font-extrabold leading-[1.05] tracking-tight text-[#082f61] sm:text-5xl lg:text-6xl">
+          Trusted by Clients.
+          <span class="block text-red-600">
+            Proven by Experience.
+          </span>
+        </h2>
+
+        <p class="mx-auto mt-5 max-w-2xl text-sm leading-6 text-slate-500 sm:text-base">
+          Strong relationships are built on trust, quality, and reliability.
+          Discover what our clients say about working with us.
+        </p>
+
+        <div class="mt-5 flex justify-center gap-2">
+          <span class="h-1 w-10 rounded-full bg-red-600"></span>
+          <span class="h-1 w-4 rounded-full bg-slate-300"></span>
+          <span class="h-1 w-4 rounded-full bg-slate-200"></span>
+        </div>
+
+      </div>
+
+
+      <!-- Featured Testimonial -->
+      <div class="mx-auto max-w-[1360px]">
+
+        <div
+          class="relative min-h-[320px] overflow-hidden rounded-[24px] bg-[#063b75] shadow-[0_20px_60px_rgba(10,47,91,0.14)] sm:min-h-[335px]">
+
+          <!-- Construction Image -->
+          <div class="absolute inset-y-0 right-0 w-full sm:w-[52%]">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#063b75] via-[#063b75]/90 to-transparent"></div>
+
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85"
+              alt="Construction project" class="h-full w-full object-cover">
+          </div>
+
+          <!-- Content -->
+          <div class="relative z-10 flex min-h-[320px] items-center px-7 py-10 sm:px-10 lg:min-h-[335px] lg:px-14">
+
+            <div class="max-w-3xl">
+
+              <div class="mb-3 text-7xl font-bold leading-none text-red-500">
+                “
+              </div>
+
+              <p class="max-w-3xl text-xl font-bold leading-[1.3] text-white sm:text-2xl lg:text-[30px]">
+                Quality products, dependable service, and the right
+                materials make all the difference in delivering a
+                successful project.
+              </p>
+
+              <!-- Client -->
+              <div class="mt-7 flex items-center gap-4">
+
+                <div
+                  class="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/30 bg-white/15 text-lg font-extrabold text-white backdrop-blur-md">
+                  PM
+                </div>
+
+                <div>
+                  <h3 class="font-bold text-white">
+                    Project Manager
+                  </h3>
+
+                  <p class="mt-1 text-sm text-blue-100">
+                    Construction Industry
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- Commitment -->
+            <div class="absolute right-8 top-1/2 hidden -translate-y-1/2 lg:block">
+
+              <div class="w-[250px] rounded-2xl border border-white/30 bg-white/10 p-7 text-center backdrop-blur-md">
+
+                <div
+                  class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border-2 border-red-500 text-3xl text-red-500">
+                  ☆
+                </div>
+
+                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-blue-100">
+                  Our Commitment
+                </p>
+
+                <p class="mt-2 text-lg font-bold text-white">
+                  Quality &amp; Reliability
+                </p>
+
+                <div class="mx-auto mt-5 h-1 w-12 rounded-full bg-red-500"></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Testimonial Cards -->
+        <div class="mt-5 grid gap-5 md:grid-cols-3">
+
+
+          <!-- Card 1 -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_12px_35px_rgba(10,47,91,0.08)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(10,47,91,0.14)]">
+
+            <div class="relative z-10">
+
+              <div class="flex items-center justify-between">
+                <div class="text-lg tracking-widest text-amber-400">
+                  ★★★★★
+                </div>
+
+                <span class="text-4xl font-bold leading-none text-red-100">
+                  ”
+                </span>
+              </div>
+
+              <p class="mt-4 min-h-[92px] text-sm leading-6 text-slate-600">
+                Having access to a broad range of building materials
+                makes procurement easier and helps keep projects
+                moving efficiently.
+              </p>
+
+              <div class="my-5 h-px bg-slate-200"></div>
+
+              <div class="flex items-center gap-4">
+
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-50 font-extrabold text-[#082f61]">
+                  CE
+                </div>
+
+                <div>
+                  <h3 class="text-sm font-bold text-[#082f61]">
+                    Construction Engineer
+                  </h3>
+
+                  <p class="mt-1 text-xs text-slate-500">
+                    Construction Projects
+                  </p>
+                </div>
+
+                <span
+                  class="ml-auto flex h-7 w-7 items-center justify-center rounded-full bg-red-500 text-xs font-bold text-white">
+                  ✓
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="absolute -bottom-16 -right-12 h-36 w-36 rounded-full bg-red-50"></div>
+
+          </div>
+
+
+          <!-- Card 2 -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_12px_35px_rgba(10,47,91,0.08)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(10,47,91,0.14)]">
+
+            <div class="relative z-10">
+
+              <div class="flex items-center justify-between">
+                <div class="text-lg tracking-widest text-amber-400">
+                  ★★★★★
+                </div>
+
+                <span class="text-4xl font-bold leading-none text-blue-100">
+                  ”
+                </span>
+              </div>
+
+              <p class="mt-4 min-h-[92px] text-sm leading-6 text-slate-600">
+                Consistent product quality and responsive communication
+                are important when coordinating supplies for
+                commercial projects.
+              </p>
+
+              <div class="my-5 h-px bg-slate-200"></div>
+
+              <div class="flex items-center gap-4">
+
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 font-extrabold text-[#082f61]">
+                  PM
+                </div>
+
+                <div>
+                  <h3 class="text-sm font-bold text-[#082f61]">
+                    Procurement Manager
+                  </h3>
+
+                  <p class="mt-1 text-xs text-slate-500">
+                    Commercial Sector
+                  </p>
+                </div>
+
+                <span
+                  class="ml-auto flex h-7 w-7 items-center justify-center rounded-full bg-blue-500 text-xs font-bold text-white">
+                  ✓
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="absolute -bottom-16 -right-12 h-36 w-36 rounded-full bg-blue-50"></div>
+
+          </div>
+
+
+          <!-- Card 3 -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_12px_35px_rgba(10,47,91,0.08)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(10,47,91,0.14)]">
+
+            <div class="relative z-10">
+
+              <div class="flex items-center justify-between">
+                <div class="text-lg tracking-widest text-amber-400">
+                  ★★★★★
+                </div>
+
+                <span class="text-4xl font-bold leading-none text-orange-100">
+                  ”
+                </span>
+              </div>
+
+              <p class="mt-4 min-h-[92px] text-sm leading-6 text-slate-600">
+                A dependable supply partner helps simplify material
+                sourcing and supports smoother coordination
+                throughout a project.
+              </p>
+
+              <div class="my-5 h-px bg-slate-200"></div>
+
+              <div class="flex items-center gap-4">
+
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-50 font-extrabold text-[#082f61]">
+                  CP
+                </div>
+
+                <div>
+                  <h3 class="text-sm font-bold text-[#082f61]">
+                    Contracting Professional
+                  </h3>
+
+                  <p class="mt-1 text-xs text-slate-500">
+                    Infrastructure Sector
+                  </p>
+                </div>
+
+                <span
+                  class="ml-auto flex h-7 w-7 items-center justify-center rounded-full bg-red-500 text-xs font-bold text-white">
+                  ✓
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="absolute -bottom-16 -right-12 h-36 w-36 rounded-full bg-orange-50"></div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Dots -->
+        <div class="mt-7 flex justify-center gap-2">
+          <span class="h-2.5 w-6 rounded-full bg-red-600"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-slate-300"></span>
+        </div>
+
+
+        <!-- CTA -->
+        <div
+          class="mt-8 rounded-[22px] border border-red-100 bg-gradient-to-r from-red-50 via-white to-red-50 px-6 py-7 shadow-sm sm:px-8 lg:px-10">
+
+          <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+
+            <div class="flex items-center gap-5">
+
+              <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-red-100 text-2xl">
+                💬
+              </div>
+
+              <div>
+
+                <h3 class="text-xl font-extrabold tracking-tight text-[#082f61] sm:text-2xl">
+                  Ready to build
+                  <span class="text-red-600">
+                    with confidence?
+                  </span>
+                </h3>
+
+                <p class="mt-1 text-sm text-slate-500 sm:text-base">
+                  Talk to our team about your building material requirements.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <a href="#contact"
+              class="group inline-flex items-center justify-center gap-4 rounded-xl bg-red-600 px-7 py-4 text-sm font-bold text-white shadow-lg shadow-red-200 transition duration-300 hover:-translate-y-1 hover:bg-red-700">
+
+              Talk to Our Team
+
+              <span class="text-xl transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Tailwind CSS CDN: remove if already installed -->
+
+  <footer class="relative overflow-hidden bg-[#0B1F38] text-white">
+
+    <!-- Decorative background -->
+    <div class="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl"></div>
+    <div class="pointer-events-none absolute -right-32 bottom-20 h-96 w-96 rounded-full bg-red-600/10 blur-3xl"></div>
+
+
+
+    <!-- Main Footer Content -->
+    <div class="relative px-5 pb-10 pt-16 sm:px-8 lg:px-12 lg:pb-12 lg:pt-20">
+      <div class="mx-auto max-w-7xl">
+
+        <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+
+          <!-- Company Info -->
+          <div class="lg:col-span-4">
+
+            <!-- Text logo: replace with your actual logo if available -->
+            <a href="/" class="inline-flex items-center gap-3">
+              <span
+                class="flex h-12 w-12 items-center justify-center rounded-xl bg-red-600 text-xl font-black text-white shadow-lg shadow-red-600/20">
+                L
+              </span>
+              <span>
+                <span class="block text-xl font-extrabold tracking-wide text-white">DUMMY</span>
+                <span class="mt-0.5 block text-[10px] font-semibold uppercase tracking-[0.32em] text-blue-200">Group ·
+                  Building Solutions</span>
+              </span>
+            </a>
+
+            <p class="mt-6 max-w-sm text-sm leading-7 text-slate-300">
+              Your trusted partner for building materials, electrical products, plumbing supplies, tools, and industrial
+              solutions across the UAE.
+            </p>
+
+            <!-- Social links: replace # with your actual profile URLs -->
+            <div class="mt-6 flex items-center gap-3">
+
+              <a href="#" aria-label="Facebook"
+                class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-200 transition-all duration-300 hover:border-red-500 hover:bg-red-600 hover:text-white">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5" aria-hidden="true">
+                  <path
+                    d="M13.4 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.5 1.6-1.5h1.7V3.2c-.3 0-1.4-.2-2.6-.2-2.6 0-4.4 1.6-4.4 4.5v2.1H6.8v3.2h2.9V21h3.7Z" />
+                </svg>
+              </a>
+
+              <a href="#" aria-label="Instagram"
+                class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-200 transition-all duration-300 hover:border-red-500 hover:bg-red-600 hover:text-white">
+                <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8" />
+                  <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" />
+                  <circle cx="17.5" cy="6.8" r="1" fill="currentColor" />
+                </svg>
+              </a>
+
+              <a href="#" aria-label="LinkedIn"
+                class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-200 transition-all duration-300 hover:border-red-500 hover:bg-red-600 hover:text-white">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5" aria-hidden="true">
+                  <path
+                    d="M5.2 3.5a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2ZM3.4 9h3.7v11H3.4V9Zm5.9 0h3.5v1.5h.1a3.9 3.9 0 0 1 3.5-1.9c3.7 0 4.4 2.4 4.4 5.5V20h-3.7v-5.2c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V20H9.3V9Z" />
+                </svg>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="lg:col-span-2">
+            <h3 class="text-base font-extrabold text-white">Quick Links</h3>
+            <div class="mb-5 mt-3 h-1 w-10 rounded-full bg-red-600"></div>
+
+            <ul class="space-y-3.5 text-sm text-slate-300">
+              <li><a href="/" class="transition-colors hover:text-red-400">Home</a></li>
+              <li><a href="/about-us/" class="transition-colors hover:text-red-400">About Us</a></li>
+              <li><a href="/products/" class="transition-colors hover:text-red-400">Our Products</a></li>
+              <li><a href="/industries-we-serve/" class="transition-colors hover:text-red-400">Industries We Serve</a>
+              </li>
+              <li><a href="/our-work-process/" class="transition-colors hover:text-red-400">Our Process</a></li>
+              <li><a href="/contact-us/" class="transition-colors hover:text-red-400">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Product Categories -->
+          <div class="lg:col-span-3">
+            <h3 class="text-base font-extrabold text-white">Product Categories</h3>
+            <div class="mb-5 mt-3 h-1 w-10 rounded-full bg-red-600"></div>
+
+            <ul class="space-y-3.5 text-sm text-slate-300">
+              <li><a href="/products/building-materials/"
+                  class="group flex items-center gap-3 transition-colors hover:text-red-400"><span
+                    class="h-1.5 w-1.5 rounded-full bg-red-500 transition-transform group-hover:scale-150"></span>Building
+                  Materials</a></li>
+              <li><a href="/products/electrical/"
+                  class="group flex items-center gap-3 transition-colors hover:text-red-400"><span
+                    class="h-1.5 w-1.5 rounded-full bg-red-500 transition-transform group-hover:scale-150"></span>Electrical
+                  Supplies</a></li>
+              <li><a href="/products/plumbing/"
+                  class="group flex items-center gap-3 transition-colors hover:text-red-400"><span
+                    class="h-1.5 w-1.5 rounded-full bg-red-500 transition-transform group-hover:scale-150"></span>Plumbing
+                  Supplies</a></li>
+              <li><a href="/products/sanitary-ware/"
+                  class="group flex items-center gap-3 transition-colors hover:text-red-400"><span
+                    class="h-1.5 w-1.5 rounded-full bg-red-500 transition-transform group-hover:scale-150"></span>Sanitary
+                  Ware</a></li>
+              <li><a href="/products/paints-tools/"
+                  class="group flex items-center gap-3 transition-colors hover:text-red-400"><span
+                    class="h-1.5 w-1.5 rounded-full bg-red-500 transition-transform group-hover:scale-150"></span>Paints
+                  &amp; Tools</a></li>
+              <li><a href="/products/industrial-supplies/"
+                  class="group flex items-center gap-3 transition-colors hover:text-red-400"><span
+                    class="h-1.5 w-1.5 rounded-full bg-red-500 transition-transform group-hover:scale-150"></span>Industrial
+                  Supplies</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Details -->
+          <div class="lg:col-span-3">
+            <h3 class="text-base font-extrabold text-white">Get in Touch</h3>
+            <div class="mb-5 mt-3 h-1 w-10 rounded-full bg-red-600"></div>
+
+            <ul class="space-y-5 text-sm text-slate-300">
+
+              <li class="flex items-start gap-3">
+                <span
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 text-red-400 ring-1 ring-white/10">
+                  <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" aria-hidden="true">
+                    <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="1.8" />
+                    <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="font-bold text-white">Our Location</p>
+                  <p class="mt-1 leading-6">UAE</p>
+                  <!-- Replace with your actual office address -->
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <span
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 text-red-400 ring-1 ring-white/10">
+                  <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" aria-hidden="true">
+                    <path
+                      d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 11.2 19a19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"
+                      stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="font-bold text-white">Phone</p>
+                  <a href="tel:+971000000000" class="mt-1 inline-block transition-colors hover:text-red-400">Add your
+                    phone number</a>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <span
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 text-red-400 ring-1 ring-white/10">
+                  <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8" />
+                    <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="font-bold text-white">Email</p>
+                  <a href="mailto:info@example.com"
+                    class="mt-1 inline-block break-all transition-colors hover:text-red-400">Add your business email</a>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <span
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 text-red-400 ring-1 ring-white/10">
+                  <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
+                    <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="font-bold text-white">Working Hours</p>
+                  <p class="mt-1 leading-6">Contact us for current business hours.</p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+
+
+
+        <!-- Bottom bar -->
+        <div
+          class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-7 text-center sm:flex-row sm:text-left">
+
+          <p class="text-xs leading-6 text-slate-400 sm:text-sm">
+            © <span>2026</span> <span class="font-semibold text-white">Dummy Group</span>. All rights reserved.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-400 sm:text-sm">
+            <a href="/privacy-policy/" class="transition-colors hover:text-red-400">Privacy Policy</a>
+            <a href="/terms-and-conditions/" class="transition-colors hover:text-red-400">Terms &amp; Conditions</a>
+          </div>
+
+          <a href="#top"
+            class="inline-flex items-center gap-2 text-xs font-semibold text-slate-300 transition-colors hover:text-red-400 sm:text-sm">
+            Back to top
+            <span class="flex h-7 w-7 items-center justify-center rounded-lg border border-white/10 bg-white/5">
+              <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" aria-hidden="true">
+                <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+  </script>
+
+  <!-- CraftCombine Text & Heading Animation Engine -->
+  <script src="assets/js/craft-animations.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Dummy Building Materials Trading LLC</title>
+  <meta name="description" content="Browse Dummy Building Materials, tools, electrical, plumbing, industrial and construction supplies in Dubai.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --red:#e50914; --navy:#071729; --ink:#10243e; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter, sans-serif; color:var(--ink); background:#fff; }
+    a { color:inherit; text-decoration:none; }
+    .product-hero { min-height:515px; background:linear-gradient(90deg,rgba(7,23,41,.98) 0%,rgba(7,23,41,.92) 33%,rgba(7,23,41,.56) 56%,rgba(7,23,41,.08) 100%), url('assets/images/bannerimage.png') center/cover no-repeat; }
+    .product-hero::after { content:''; position:absolute; inset:auto 0 0; height:150px; background:linear-gradient(transparent,rgba(7,23,41,.35)); pointer-events:none; }
+    .product-hero-content { position:relative; z-index:1; }
+    .product-card { position:relative; overflow:hidden; isolation:isolate; min-height:350px; border:1px solid #e2e8f0; border-radius:22px; background:#fff; box-shadow:0 12px 30px rgba(15,35,62,.07); transition:transform .32s ease, box-shadow .32s ease, border-color .32s ease; }
+    .product-card:hover { transform:translateY(-9px); border-color:rgba(229,9,20,.3); box-shadow:0 25px 48px rgba(15,35,62,.16); }
+    .product-card img { height:174px; width:100%; object-fit:cover; transition:transform .55s ease; }
+    .product-card:hover img { transform:scale(1.08); }
+    .product-card .media { overflow:hidden; position:relative; }
+    .product-card .media::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 44%,rgba(7,23,41,.4)); }
+    .product-icon { position:absolute; top:145px; left:22px; z-index:2; display:grid; width:58px; height:58px; place-items:center; border:4px solid #fff; border-radius:17px; background:var(--red); color:#fff; font-size:24px; box-shadow:0 10px 20px rgba(229,9,20,.28); }
+    .product-card:nth-child(even) .product-icon { background:var(--ink); box-shadow:0 10px 20px rgba(16,36,62,.22); }
+    .product-card .number { position:absolute; right:20px; top:187px; color:rgba(16,36,62,.08); font-size:42px; font-weight:900; line-height:1; }
+    .product-card .card-body { padding:35px 22px 22px; }
+    .product-card .product-link { display:inline-flex; align-items:center; gap:8px; margin-top:17px; color:var(--red); font-size:12px; font-weight:800; }
+    .product-card .product-link::after { content:'→'; transition:transform .2s ease; }
+    .product-card:hover .product-link::after { transform:translateX(4px); }
+    .category-chip { display:inline-flex; align-items:center; gap:8px; border:1px solid #e2e8f0; border-radius:999px; background:#fff; padding:11px 16px; color:#526377; font-size:12px; font-weight:700; box-shadow:0 4px 12px rgba(15,35,62,.04); transition:.22s ease; }
+    .category-chip:hover, .category-chip.active { border-color:var(--red); background:var(--red); color:#fff; box-shadow:0 8px 18px rgba(229,9,20,.22); transform:translateY(-2px); }
+    .category-chip span { color:inherit; font-size:15px; }
+    .catalog-bg { background:linear-gradient(180deg,#f8fafc 0%,#fff 74%); }
+    .catalog-bg::before { content:''; position:absolute; inset:0; opacity:.55; background-image:radial-gradient(rgba(16,36,62,.1) 1px,transparent 1px); background-size:28px 28px; mask-image:linear-gradient(to bottom,black,transparent 55%); pointer-events:none; }
+    .service-card { border:1px solid rgba(255,255,255,.14); border-radius:20px; background:rgba(255,255,255,.055); padding:26px; transition:.25s ease; }
+    .service-card:hover { transform:translateY(-5px); background:rgba(255,255,255,.1); }
+    .service-icon { display:grid; width:46px; height:46px; place-items:center; border-radius:14px; background:var(--red); font-size:20px; }
+    .cta-panel { background:linear-gradient(110deg,#071729 0%,#0a294a 63%,#1a2436 100%); box-shadow:0 26px 50px rgba(7,23,41,.22); }
+    .cta-panel::after { content:''; position:absolute; right:-80px; bottom:-115px; width:280px; height:280px; border:29px solid rgba(229,9,20,.9); transform:rotate(38deg); }
+    @media(max-width:767px){ .product-hero { min-height:570px; background:linear-gradient(180deg,rgba(7,23,41,.97),rgba(7,23,41,.82)),url('assets/images/bannerimage.png') center/cover no-repeat; } .product-card { min-height:0; } }
+  </style>
+  <link rel="stylesheet" href="assets/css/text-animations.css">
+  <script src="assets/js/text-animations.js" defer></script>
+</head>
+<body>
+  <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
+      <a href="index.html" class="flex items-center gap-2" aria-label="Dummy home">
+        <span class="flex h-10 w-9 items-center justify-center rounded-lg bg-red-600 text-xl font-black text-white">D</span>
+        <span><span class="block text-xl font-extrabold leading-none text-[#10243e]">Dummy</span><span class="mt-1 block text-[9px] font-semibold tracking-wide text-slate-500">Building Materials Trading LLC</span></span>
+      </a>
+      <nav id="mainNav" class="hidden items-center gap-8 md:flex">
+        <a href="index.html" class="text-sm font-medium text-slate-600 transition hover:text-red-600">Home</a>
+        <a href="about.html" class="text-sm font-medium text-slate-600 transition hover:text-red-600">About Us</a>
+        <a href="products.html" class="border-b-2 border-red-600 py-2 text-sm font-bold text-red-600">Products</a><a href="blog.html" class="text-sm font-medium text-slate-600 transition hover:text-red-600">Blog</a>
+        <a href="services.html" class="text-sm font-medium text-slate-600 transition hover:text-red-600">Services</a>
+        <a href="contact.html" class="text-sm font-medium text-slate-600 transition hover:text-red-600">Contact Us</a>
+      </nav>
+      <div class="flex items-center gap-2"><a href="contact.html" class="inline-flex items-center gap-2 rounded-full bg-red-600 px-5 py-3 text-xs font-bold text-white shadow-md shadow-red-600/20 transition hover:bg-[#10243e]">Get Quote <span>→</span></a><button id="menuButton" class="rounded-lg p-2 text-xl text-[#10243e] md:hidden" aria-label="Toggle navigation">☰</button></div>
+    </div>
+    <nav id="mobileNav" class="hidden border-t border-slate-100 bg-white px-5 py-4 md:hidden"><div class="mx-auto grid max-w-7xl gap-1 text-sm font-semibold text-slate-700"><a class="rounded-lg px-3 py-3 hover:bg-red-50" href="index.html">Home</a><a class="rounded-lg px-3 py-3 hover:bg-red-50" href="about.html">About Us</a><a class="rounded-lg bg-red-50 px-3 py-3 text-red-600" href="products.html">Products</a><a class="rounded-lg px-3 py-3 hover:bg-red-50" href="blog.html">Blog</a><a class="rounded-lg px-3 py-3 hover:bg-red-50" href="services.html">Services</a><a class="rounded-lg px-3 py-3 hover:bg-red-50" href="contact.html">Contact Us</a></div></nav>
+  </header>
+
+  <main>
+    <section class="product-hero relative overflow-hidden text-white">
+      <div class="product-hero-content mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+        <div class="max-w-2xl">
+          <div class="mb-7 flex items-center gap-3 text-xs"><a href="index.html" class="text-slate-300 hover:text-white">Home</a><span class="text-slate-500">/</span><span class="font-semibold text-red-400">Products</span></div>
+          <div class="mb-5 flex items-center gap-3"><span class="h-0.5 w-9 bg-red-500"></span><span class="text-[11px] font-bold uppercase tracking-[.26em] text-red-300">Complete Construction Supply</span></div>
+          <h1 class="text-4xl font-black leading-[1.06] tracking-tight sm:text-5xl lg:text-6xl">Everything Your Project Needs.<span class="block text-red-500">Ready When You Are.</span></h1>
+          <p class="mt-6 max-w-xl text-sm leading-7 text-slate-200 sm:text-base">From foundations to finishing touches, discover reliable materials, tools, MEP solutions and industrial supplies from trusted brands.</p>
+          <div class="mt-8 flex flex-wrap gap-3"><a href="#catalog" class="rounded-full bg-red-600 px-6 py-3.5 text-xs font-bold shadow-lg shadow-red-600/30 transition hover:bg-red-700">Explore Categories →</a><a href="contact.html" class="rounded-full border border-white/30 px-6 py-3.5 text-xs font-bold transition hover:bg-white/10">Request a Product Quote</a></div>
+        </div>
+        <div class="mt-14 grid max-w-3xl grid-cols-3 gap-3 text-center sm:gap-5"><div class="border-r border-white/20"><strong class="block text-2xl font-black text-red-400 sm:text-3xl">18,500+</strong><span class="text-[10px] font-bold uppercase tracking-wider text-slate-300">Stocked Items</span></div><div class="border-r border-white/20"><strong class="block text-2xl font-black sm:text-3xl">9</strong><span class="text-[10px] font-bold uppercase tracking-wider text-slate-300">Core Categories</span></div><div><strong class="block text-2xl font-black text-red-400 sm:text-3xl">UAE</strong><span class="text-[10px] font-bold uppercase tracking-wider text-slate-300">Wide Delivery</span></div></div>
+      </div>
+    </section>
+
+    <section id="catalog" class="catalog-bg relative px-5 py-16 lg:px-8 lg:py-24">
+      <div class="relative mx-auto max-w-7xl">
+        <div class="mx-auto max-w-3xl text-center"><div class="mb-4 flex items-center justify-center gap-3"><span class="h-0.5 w-7 bg-red-600"></span><span class="text-[11px] font-bold uppercase tracking-[.24em] text-red-600">Product Catalog</span><span class="h-0.5 w-7 bg-red-600"></span></div><h2 class="text-3xl font-black tracking-tight text-[#10243e] sm:text-4xl">Built for Every Stage of <span class="text-red-600">Your Build</span></h2><p class="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-600">Select a category to find the materials and equipment that keep your project moving forward.</p></div>
+        <div class="mt-9 flex flex-wrap justify-center gap-2"><a href="#power-tools" class="category-chip active"><span>⚡</span>All Products</a><a href="#power-tools" class="category-chip">Power Tools</a><a href="#electrical" class="category-chip">Electrical</a><a href="#plumbing" class="category-chip">Plumbing</a><a href="#building" class="category-chip">Building Materials</a></div>
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article id="power-tools" class="product-card"><div class="media"><img src="assets/images/steel2.webp" alt="Power tools and construction equipment"></div><span class="product-icon">⚡</span><span class="number">01</span><div class="card-body"><p class="text-[10px] font-bold uppercase tracking-[.18em] text-red-600">Professional Grade</p><h3 class="mt-2 text-xl font-extrabold text-[#10243e]">Power Tools</h3><p class="mt-3 text-sm leading-6 text-slate-600">Reliable drilling, cutting, grinding and site equipment for demanding jobs.</p><a class="product-link" href="contact.html">Explore range</a></div></article>
+          <article id="electrical" class="product-card"><div class="media"><img src="assets/images/material1.png" alt="Electrical products and materials"></div><span class="product-icon">▦</span><span class="number">02</span><div class="card-body"><p class="text-[10px] font-bold uppercase tracking-[.18em] text-red-600">Safe Connections</p><h3 class="mt-2 text-xl font-extrabold text-[#10243e]">Electrical Products</h3><p class="mt-3 text-sm leading-6 text-slate-600">Cables, conduits, switches and essential electrical accessories.</p><a class="product-link" href="contact.html">Explore range</a></div></article>
+          <article id="plumbing" class="product-card"><div class="media"><img src="assets/images/blockpb.jpg" alt="Plumbing and sanitaryware materials"></div><span class="product-icon">◌</span><span class="number">03</span><div class="card-body"><p class="text-[10px] font-bold uppercase tracking-[.18em] text-red-600">Flow Perfected</p><h3 class="mt-2 text-xl font-extrabold text-[#10243e]">Sanitaryware &amp; Plumbing</h3><p class="mt-3 text-sm leading-6 text-slate-600">Pipes, fittings, valves and sanitary solutions for every space.</p><a class="product-link" href="contact.html">Explore range</a></div></article>
+          <article class="product-card"><div class="media"><img src="assets/images/construction.jpg" alt="Adhesives and waterproofing materials"></div><span class="product-icon">◈</span><span class="number">04</span><div class="card-body"><p class="text-[10px] font-bold uppercase tracking-[.18em] text-red-600">Lasting Protection</p><h3 class="mt-2 text-xl font-extrabold text-[#10243e]">Adhesives &amp; Waterproofing</h3><p class="mt-3 text-sm leading-6 text-slate-600">High-performance bonding, sealing and protection systems.</p><a class="product-link" href="contact.html">Explore range</a></div></article>
+          <article class="product-card"><div class="media"><img src="assets/images/steel.webp" alt="Industrial products and steel"></div><span class="product-icon">⚙</span><span class="number">05</span><div class="card-body"><p class="text-[10px] font-bold uppercase tracking-[.18em] text-red-600">Site Ready</p><h3 class="mt-2 text-xl font-extrabold text-[#10243e]">Industrial Products</h3><p class="mt-3 text-sm leading-6 text-slate-600">Heavy-duty supplies built for industrial and project environments.</p><a class="product-link" href="contact.html">Explore range</a></div></article>
+          <article class="product-card"><div class="media"><img src="assets/images/steel2.webp" alt="Hand tools and safety products"></div><span class="product-icon">✦</span><span class="number">06</span><div class="card-body"><p class="text-[10px] font-bold uppercase tracking-[.18em] text-red-600">Work Smarter</p><h3 class="mt-2 text-xl font-extrabold text-[#10243e]">Hand Tools &amp; Safety</h3><p class="mt-3 text-sm leading-6 text-slate-600">Practical hand tools and dependable personal protection equipment.</p><a class="product-link" href="contact.html">Explore range</a></div></article>
+          <article class="product-card"><div class="media"><img src="assets/images/blockpb.jpg" alt="Gypsum boards and accessories"></div><span class="product-icon">▤</span><span class="number">07</span><div class="card-body"><p class="text-[10px] font-bold uppercase tracking-[.18em] text-red-600">Interior Systems</p><h3 class="mt-2 text-xl font-extrabold text-[#10243e]">Gypsum Boards &amp; Accessories</h3><p class="mt-3 text-sm leading-6 text-slate-600">Complete dry-wall solutions for refined interior spaces.</p><a class="product-link" href="contact.html">Explore range</a></div></article>
+          <article class="product-card"><div class="media"><img src="assets/images/bannerimage.png" alt="Paints and accessories"></div><span class="product-icon">◉</span><span class="number">08</span><div class="card-body"><p class="text-[10px] font-bold uppercase tracking-[.18em] text-red-600">The Perfect Finish</p><h3 class="mt-2 text-xl font-extrabold text-[#10243e]">Paints Accessories</h3><p class="mt-3 text-sm leading-6 text-slate-600">Professional coatings, applicators and finishing essentials.</p><a class="product-link" href="contact.html">Explore range</a></div></article>
+          <article id="building" class="product-card"><div class="media"><img src="assets/images/material1.png" alt="Building materials"></div><span class="product-icon">▧</span><span class="number">09</span><div class="card-body"><p class="text-[10px] font-bold uppercase tracking-[.18em] text-red-600">Strong Foundations</p><h3 class="mt-2 text-xl font-extrabold text-[#10243e]">Building Materials</h3><p class="mt-3 text-sm leading-6 text-slate-600">Cement, blocks, steel and essential materials for stronger builds.</p><a class="product-link" href="contact.html">Explore range</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#071729] px-5 py-16 text-white lg:px-8 lg:py-20"><div class="mx-auto max-w-7xl"><div class="grid gap-5 md:grid-cols-3"><article class="service-card"><div class="service-icon">✓</div><h2 class="mt-5 text-lg font-extrabold">Certified Quality</h2><p class="mt-3 text-sm leading-6 text-slate-300">Source approved products with dependable specifications for your project.</p></article><article class="service-card"><div class="service-icon">↗</div><h2 class="mt-5 text-lg font-extrabold">Fast UAE Delivery</h2><p class="mt-3 text-sm leading-6 text-slate-300">Get project-ready materials delivered precisely where and when you need them.</p></article><article class="service-card"><div class="service-icon">⌘</div><h2 class="mt-5 text-lg font-extrabold">Expert Product Support</h2><p class="mt-3 text-sm leading-6 text-slate-300">Our team helps match the right products to your quantity, budget and timeline.</p></article></div></div></section>
+
+    <section class="bg-white px-5 py-16 lg:px-8 lg:py-20"><div class="cta-panel relative mx-auto max-w-7xl overflow-hidden rounded-3xl px-7 py-12 text-white sm:px-12 sm:py-16"><div class="absolute inset-0 opacity-20"><img src="assets/images/construction.jpg" alt="" class="h-full w-full object-cover"></div><div class="absolute inset-0 bg-gradient-to-r from-[#071729] via-[#071729]/95 to-[#071729]/45"></div><div class="relative z-10 max-w-2xl"><span class="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-red-300">Need a specific material?</span><h2 class="mt-5 text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">Let’s Source Exactly What Your <span class="text-red-400">Project Requires.</span></h2><p class="mt-5 max-w-xl text-sm leading-7 text-slate-300">Share your bill of quantities or product list. Our project desk will prepare a clear, competitive quotation with availability and delivery details.</p><div class="mt-8 flex flex-wrap gap-3"><a href="contact.html" class="rounded-full bg-red-600 px-6 py-3.5 text-xs font-bold transition hover:bg-red-700">Request Product Quotation →</a><a href="tel:+97140000000" class="rounded-full border border-white/30 px-6 py-3.5 text-xs font-bold transition hover:bg-white/10">Call Our Product Desk</a></div></div></div></section>
+  </main>
+
+  <footer class="bg-[#061426] px-5 pb-6 pt-14 text-slate-300 lg:px-8"><div class="mx-auto max-w-7xl"><div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12"><div><a href="index.html" class="mb-5 inline-flex items-center gap-2"><span class="flex h-9 w-8 items-center justify-center rounded bg-red-600 font-black text-white">D</span><span><span class="block text-lg font-extrabold leading-none text-white">Dummy</span><span class="mt-1 block text-[8px] tracking-wide text-slate-400">Building Materials Trading LLC</span></span></a><p class="text-xs leading-6 text-slate-400">A trusted Dubai supplier of premium construction materials, electrical, plumbing, sanitaryware, paints, tools and industrial supplies.</p><div class="mt-5 flex flex-wrap gap-2"><span class="rounded bg-white/10 px-2.5 py-1.5 text-[9px] font-semibold">ISO 9001 Certified</span><span class="rounded bg-white/10 px-2.5 py-1.5 text-[9px] font-semibold">DEWA Approved</span></div></div><div><h3 class="mb-5 text-xs font-extrabold uppercase tracking-wider text-white">Quick Links</h3><ul class="space-y-3 text-xs"><li><a href="index.html" class="hover:text-red-400">Home</a></li><li><a href="about.html" class="hover:text-red-400">About Us</a></li><li><a href="products.html" class="text-red-400">Products Catalog</a></li><li><a href="services.html" class="hover:text-red-400">Services &amp; Solutions</a></li><li><a href="contact.html" class="hover:text-red-400">Contact Us &amp; RFQ</a></li></ul></div><div><h3 class="mb-5 text-xs font-extrabold uppercase tracking-wider text-white">Categories</h3><ul class="space-y-3 text-xs"><li>Power Tools</li><li>Electrical Products</li><li>Plumbing Materials</li><li>Industrial Products</li><li>Building Materials</li></ul></div><div><h3 class="mb-5 text-xs font-extrabold uppercase tracking-wider text-white">Contact Dubai</h3><ul class="space-y-4 text-xs leading-5 text-slate-400"><li>First Al Khail St, Al Quoz, Dubai, UAE</li><li><a href="tel:+97140000000" class="hover:text-white">+971 4 000 0000</a></li><li><a href="mailto:info@dummycompany.com" class="hover:text-white">info@dummycompany.com</a></li></ul></div></div><div class="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-[10px] text-slate-500 sm:flex-row sm:items-center sm:justify-between"><p>© 2026 Dummy Building Materials Trading LLC. All rights reserved.</p><div class="flex gap-5"><a href="#" class="hover:text-white">Privacy Policy</a><a href="#" class="hover:text-white">Terms of Supply</a><a href="#" class="hover:text-white">Site Map</a></div></div></div></footer>
+  <script>document.getElementById('menuButton').addEventListener('click',()=>document.getElementById('mobileNav').classList.toggle('hidden'));</script>
+</body>
+</html>

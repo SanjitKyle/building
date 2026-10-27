@@ -1,0 +1,131 @@
+/* ==========================================================================
+   CRAFTCOMBINE.ORG TEXT, HEADING & SCROLLING MARQUEE ANIMATION SYSTEM
+   Signature Easing Curve: cubic-bezier(0.22, 1, 0.36, 1)
+   ========================================================================== */
+
+/* 1. CONTINUOUS SCROLLING TEXT MARQUEE RIBBON */
+@keyframes craftMarquee {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes craftMarqueeReverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+.craft-marquee-container {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  background: #071322;
+  color: #ffffff;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.craft-marquee-container.light {
+  background: #ffffff;
+  color: #2C3E50;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.craft-marquee-track {
+  display: flex;
+  width: max-content;
+  flex-shrink: 0;
+  align-items: center;
+  white-space: nowrap;
+  animation: craftMarquee 34s linear infinite;
+  will-change: transform;
+}
+
+.craft-marquee-track.reverse {
+  animation: craftMarqueeReverse 34s linear infinite;
+}
+
+.craft-marquee-track:hover,
+.craft-marquee-container:hover .craft-marquee-track {
+  animation-play-state: paused;
+}
+
+.craft-marquee-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.craft-marquee-sep {
+  margin: 0 28px;
+  color: #e50914;
+  opacity: 0.9;
+  font-size: 18px;
+}
+
+/* 2. TEXT & HEADING SCROLL REVEAL ANIMATIONS */
+.craft-text-reveal {
+  opacity: 0;
+  transform: translate3d(0, 36px, 0);
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.craft-text-reveal.in-view {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Heading Line Mask (slide-up from behind mask) */
+.craft-heading-mask {
+  overflow: hidden;
+  display: block;
+}
+
+.craft-heading-mask > * {
+  display: block;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.craft-heading-mask.in-view > *,
+.craft-text-reveal.in-view .craft-heading-mask > * {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Stagger Delay Cascade */
+.craft-stagger-1 { transition-delay: 0.08s; }
+.craft-stagger-2 { transition-delay: 0.16s; }
+.craft-stagger-3 { transition-delay: 0.24s; }
+.craft-stagger-4 { transition-delay: 0.32s; }
+.craft-stagger-5 { transition-delay: 0.40s; }
+.craft-stagger-6 { transition-delay: 0.48s; }
+
+/* Card & Container Reveal */
+.craft-card-reveal {
+  opacity: 0;
+  transform: translate3d(0, 40px, 0);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.craft-card-reveal.in-view {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}

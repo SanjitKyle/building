@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services &amp; Supply Solutions | Dummy Building Materials Trading LLC</title>
+  <meta name="description"
+    content="Explore specialized construction services by Dummy UAE: cut & bend rebar, computerized paint tinting, crane offload logistics, site staging, and technical BOQ submittals." />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CraftCombine Text & Marquee Animations -->
+  <link rel="stylesheet" href="assets/css/craft-animations.css">
+
+  <style>
+    :root {
+      --red: #e50914;
+      --red-hover: #bd0008;
+      --dark: #071322;
+      --navy: #2C3E50;
+      --white: #ffffff;
+      --muted: #dce4ee;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #2C3E50;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+    .site-header {
+      min-height: 92px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .nav-container {
+      width: min(1440px, 92%);
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-logo {
+      width: 62px;
+      height: 62px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(15px, 2vw, 30px);
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 650;
+      color: #2C3E50;
+      white-space: nowrap;
+      transition: color 0.25s ease;
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--red);
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--red);
+      border-radius: 2px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .quote-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, #f20d19, #bd0008);
+      color: #ffffff;
+      border-radius: 12px;
+      font-weight: 750;
+      font-size: 14px;
+      border: 0;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 14px rgba(229, 9, 20, 0.25);
+    }
+
+    .quote-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(229, 9, 20, 0.35);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      font-size: 26px;
+      color: #071322;
+      padding: 8px;
+    }
+
+    @media (max-width: 991px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 20px 6%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        border-top: 1px solid #f1f5f9;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 14px 0;
+        font-size: 15px;
+        border-bottom: 1px solid #f1f5f9;
+      }
+
+      .nav-links a.active::after {
+        display: none;
+      }
+    }
+
+    /* SERVICES HERO BANNER */
+    .services-hero-banner {
+      position: relative;
+      background: #071322;
+      overflow: hidden;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+    }
+
+    .services-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(90deg, rgba(7, 19, 34, 0.96) 0%, rgba(7, 19, 34, 0.88) 45%, rgba(7, 19, 34, 0.55) 75%, rgba(7, 19, 34, 0.35) 100%),
+        url('/assets/images/bannerimage.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* SERVICE CARD STYLING */
+    .service-card-feature {
+      position: relative;
+      background: radial-gradient(circle at top right, rgba(229, 9, 20, 0.06), transparent 70%), #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 32px 28px;
+      box-shadow: 0 12px 32px rgba(15, 35, 62, 0.06);
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .service-card-feature:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 50px rgba(15, 35, 62, 0.14);
+      border-color: rgba(229, 9, 20, 0.35);
+    }
+
+    .service-card-feature .top-accent-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      width: 48px;
+      background: #e50914;
+      border-radius: 0 0 4px 0;
+      transition: width 0.35s ease;
+    }
+
+    .service-card-feature:hover .top-accent-bar {
+      width: 100%;
+    }
+
+    .service-card-feature:nth-child(even) .top-accent-bar {
+      background: #071322;
+    }
+
+    .service-card-feature:nth-child(even):hover .top-accent-bar {
+      background: #e50914;
+    }
+
+    /* Squircle Icon */
+    .service-icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card-feature:hover .service-icon-box {
+      transform: scale(1.1);
+    }
+
+    /* STEP WORKFLOW CARD */
+    .step-card {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 22px;
+      padding: 30px 24px;
+      box-shadow: 0 10px 28px rgba(15, 35, 62, 0.05);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(229, 9, 20, 0.3);
+    }
+
+    .step-number-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #fff0f1;
+      color: #e50914;
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 18px;
+      border: 1px solid rgba(229, 9, 20, 0.15);
+    }
+
+    /* FORM STYLES */
+    .form-input-custom {
+      width: 100%;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #2C3E50;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-input-custom:focus {
+      border-color: #e50914;
+      box-shadow: 0 0 0 4px rgba(229, 9, 20, 0.1);
+    }
+
+    /* FLOATING WHATSAPP */
+    .whatsapp-float {
+      position: fixed;
+      z-index: 40;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #13bd65;
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 50px;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.25);
+      font-size: 13px;
+      font-weight: 750;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(19, 189, 101, 0.4);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-container">
+
+      <a href="index.html" class="brand" aria-label="Dummy home">
+        <img class="brand-logo" src="images/dummy-logo.png" alt="Dummy logo"
+          onerror="this.onerror=null;this.parentElement.innerHTML='<span class=\'flex h-11 w-11 items-center justify-center rounded-xl bg-red-600 text-2xl font-black text-white shadow-md\'>D</span><div class=\'ml-3\'><div class=\'text-2xl font-extrabold text-[#071322] leading-none\'>Dummy</div><div class=\'text-[10px] font-semibold tracking-wider text-slate-500 mt-1 uppercase\'>Building Materials Trading LLC</div></div>'" />
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a class="active" href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="quote-btn" href="contact.html">
+          Get Quote <span>→</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ================================================================= -->
+    <!-- 1. HERO BANNER                                                    -->
+    <!-- ================================================================= -->
+    <section class="services-hero-banner">
+      <div class="services-hero-bg"></div>
+
+      <div class="relative z-10 mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24 w-full">
+        <div class="max-w-3xl">
+
+          <!-- Breadcrumbs -->
+          <div class="mb-6 flex items-center gap-3 text-xs font-semibold">
+            <a href="index.html" class="text-slate-300 transition hover:text-white">Home</a>
+            <span class="text-red-500">/</span>
+            <span class="text-red-400">Services &amp; Solutions</span>
+          </div>
+
+          <!-- Eyebrow Pill Badge -->
+          <div class="mb-5 inline-flex items-center gap-2.5 rounded-full border border-red-500/30 bg-red-600/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-red-300 backdrop-blur-md">
+            <span class="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
+            Turnkey MEP, Civil &amp; Site Logistics
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="text-4xl font-black leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+            End-to-End Building &amp;
+            <span class="block text-red-500">Material Supply Services</span>
+          </h1>
+
+          <!-- Hero Paragraph -->
+          <p class="mt-6 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
+            Beyond standard trading, Dummy delivers specialized value-added engineering and supply-chain services: computerized rebar fabrication, precision color tinting, heavy crane site offloads, and rapid technical BOQ estimations.
+          </p>
+
+          <!-- CTAs -->
+          <div class="mt-9 flex flex-wrap items-center gap-4">
+            <a href="#services-grid"
+              class="inline-flex items-center gap-3 rounded-full bg-red-600 px-7 py-4 text-sm font-bold text-white shadow-lg shadow-red-600/30 transition hover:-translate-y-1 hover:bg-red-700">
+              Explore Our Services ↓
+            </a>
+
+            <a href="#rfq-section"
+              class="inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/10 px-7 py-4 text-sm font-bold text-white backdrop-blur-sm transition hover:border-white hover:bg-white/20">
+              Request Service Quote <span>↗</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Strip -->
+          <div class="mt-10 flex flex-wrap items-center gap-6 border-t border-white/15 pt-6 text-xs font-semibold text-slate-300">
+            <div class="flex items-center gap-2">
+              <span class="text-red-500 font-bold">✓</span> Same-Day Crane Delivery
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-red-500 font-bold">✓</span> ASTM &amp; BS Rebar Specs
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-red-500 font-bold">✓</span> Jotun Multi-Tint Station
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-red-500 font-bold">✓</span> 30–60 Day Contractor Credit*
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 2. CRAFTCOMBINE INFINITE SCROLLING TEXT TICKER MARQUEE            -->
+    <!-- ================================================================= -->
+    <div class="craft-marquee-container" aria-label="Key highlights">
+      <div class="craft-marquee-track">
+        <span class="craft-marquee-item">COMPUTERIZED CUT &amp; BEND REBAR</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">HEAVY BOOM CRANE SITE OFFLOADING</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">AUTOMATED INDUSTRIAL PAINT TINTING</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">2-HOUR TECHNICAL BOQ SUBMITTALS</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">120,000 SQ.FT SITE STAGING BUFFER</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">DEWA &amp; DUBAI MUNICIPALITY APPROVED</span>
+        <span class="craft-marquee-sep">✦</span>
+        <!-- Infinite Duplicate -->
+        <span class="craft-marquee-item">COMPUTERIZED CUT &amp; BEND REBAR</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">HEAVY BOOM CRANE SITE OFFLOADING</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">AUTOMATED INDUSTRIAL PAINT TINTING</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">2-HOUR TECHNICAL BOQ SUBMITTALS</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">120,000 SQ.FT SITE STAGING BUFFER</span>
+        <span class="craft-marquee-sep">✦</span>
+        <span class="craft-marquee-item">DEWA &amp; DUBAI MUNICIPALITY APPROVED</span>
+        <span class="craft-marquee-sep">✦</span>
+      </div>
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- 3. 6 SPECIALIZED SUPPLY & ENGINEERING SERVICES                    -->
+    <!-- ================================================================= -->
+    <section id="services-grid" class="bg-white px-5 py-16 sm:px-8 lg:py-24">
+      <div class="mx-auto max-w-7xl">
+
+        <div class="mx-auto mb-14 max-w-3xl text-center">
+          <div class="mb-4 inline-flex items-center gap-3">
+            <span class="h-0.5 w-8 bg-red-600"></span>
+            <span class="text-xs font-bold uppercase tracking-[0.24em] text-red-600">Contractor Solutions</span>
+            <span class="h-0.5 w-8 bg-red-600"></span>
+          </div>
+
+          <h2 class="text-3xl font-black tracking-tight text-[#071322] sm:text-4xl lg:text-5xl">
+            Integrated Services Built for <span class="text-red-600">Complex Projects</span>
+          </h2>
+
+          <p class="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#2C3E50]">
+            From initial structural foundations to finishing architectural coats, we streamline procurement, eliminate site downtime, and ensure complete regulatory compliance.
+          </p>
+        </div>
+
+        <!-- 6 Core Services Grid -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+          <!-- Service 1: Cut & Bend Rebar Fabrication -->
+          <article class="service-card-feature group">
+            <span class="top-accent-bar"></span>
+            <div>
+              <div class="service-icon-box bg-red-50 text-red-600 border border-red-100 shadow-sm">
+                ⚙
+              </div>
+              <p class="text-[10px] font-black uppercase tracking-[0.2em] text-red-600">Structural Steel</p>
+              <h3 class="mt-2 text-2xl font-black text-[#071322]">Cut &amp; Bend Rebar Fabrication</h3>
+              <p class="mt-3 text-xs leading-6 text-[#2C3E50]">
+                Customized CNC shearing and bending according to your engineer's Bar Bending Schedule (BBS). Eliminates on-site rebar wastage, reduces labor costs, and speeds up slab casting.
+              </p>
+
+              <ul class="mt-6 space-y-2.5 text-xs text-[#2C3E50] border-t border-slate-100 pt-5">
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> ASTM A615 Gr. 60 &amp; BS 4449 Certified</li>
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Tagged &amp; Bundled by Pouring Zone</li>
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Factory Mill Test Certificates Included</li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-500">Fabrication Center</span>
+              <a href="#rfq-section" class="text-xs font-extrabold text-red-600 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                Request Rebar Quote →
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 2: Computerized Paint Tinting -->
+          <article class="service-card-feature group">
+            <span class="top-accent-bar"></span>
+            <div>
+              <div class="service-icon-box bg-slate-100 text-[#071322] border border-slate-200 shadow-sm">
+                ◉
+              </div>
+              <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#071322]">Architectural &amp; Industrial</p>
+              <h3 class="mt-2 text-2xl font-black text-[#071322]">Computerized Paint Tinting</h3>
+              <p class="mt-3 text-xs leading-6 text-[#2C3E50]">
+                Official authorized Jotun &amp; National Paints automated multi-color dispensing center in Al Quoz. Instant spectrophotometer matching for interior emulsions, exterior siloxanes, and heavy-duty epoxies.
+              </p>
+
+              <ul class="mt-6 space-y-2.5 text-xs text-[#2C3E50] border-t border-slate-100 pt-5">
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> 10,000+ RAL, NCS &amp; Jotun Color Codes</li>
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Moisture-Resistant &amp; Anti-Carbonation</li>
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> On-the-Spot Mixing in Under 15 Minutes</li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-500">Tinting Station</span>
+              <a href="#rfq-section" class="text-xs font-extrabold text-red-600 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                Order Tinting →
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 3: Heavy Logistics & Crane Offloading -->
+          <article class="service-card-feature group">
+            <span class="top-accent-bar"></span>
+            <div>
+              <div class="service-icon-box bg-red-50 text-red-600 border border-red-100 shadow-sm">
+                ↗
+              </div>
+              <p class="text-[10px] font-black uppercase tracking-[0.2em] text-red-600">Transportation Fleet</p>
+              <h3 class="mt-2 text-2xl font-black text-[#071322]">Crane Offloading &amp; Logistics</h3>
+              <p class="mt-3 text-xs leading-6 text-[#2C3E50]">
+                Our private transport armada includes heavy flatbeds, articulated trailers, and boom-mounted hydraulic crane trucks. We offload materials directly onto upper floor scaffolds, basements, or restricted access job-sites.
+              </p>
+
+              <ul class="mt-6 space-y-2.5 text-xs text-[#2C3E50] border-t border-slate-100 pt-5">
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> 10 to 40-Ton Mobile Boom Capacities</li>
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> GPS Live Fleet Tracking &amp; ETA Alerts</li>
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Scheduled Night &amp; Restricted Hour Drops</li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-500">All 7 Emirates</span>
+              <a href="#rfq-section" class="text-xs font-extrabold text-red-600 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                Book Logistics →
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 4: Site Staging & Phased Delivery -->
+          <article class="service-card-feature group">
+            <span class="top-accent-bar"></span>
+            <div>
+              <div class="service-icon-box bg-slate-100 text-[#071322] border border-slate-200 shadow-sm">
+                ▦
+              </div>
+              <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#071322]">Storage &amp; Staging</p>
+              <h3 class="mt-2 text-2xl font-black text-[#071322]">Site Staging &amp; Warehousing</h3>
+              <p class="mt-3 text-xs leading-6 text-[#2C3E50]">
+                Avoid site congestion and weather damage. We hold your bulk project supplies in our 120,000 sq.ft covered warehouse facility in Al Quoz, delivering phased batches precisely when your site is ready for installation.
+              </p>
+
+              <ul class="mt-6 space-y-2.5 text-xs text-[#2C3E50] border-t border-slate-100 pt-5">
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Just-In-Time (JIT) Site Coordination</li>
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Climate-Controlled Chemical &amp; Sealant Storage</li>
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Free 30-Day Holding for Bulk Purchases</li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-500">Warehouse Buffer</span>
+              <a href="#rfq-section" class="text-xs font-extrabold text-red-600 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                Inquire Staging →
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 5: BOQ Conversion & Submittal Preparation -->
+          <article class="service-card-feature group">
+            <span class="top-accent-bar"></span>
+            <div>
+              <div class="service-icon-box bg-red-50 text-red-600 border border-red-100 shadow-sm">
+                ✦
+              </div>
+              <p class="text-[10px] font-black uppercase tracking-[0.2em] text-red-600">Engineering Desk</p>
+              <h3 class="mt-2 text-2xl font-black text-[#071322]">BOQ Submittal &amp; Estimation</h3>
+              <p class="mt-3 text-xs leading-6 text-[#2C3E50]">
+                Our in-house materials engineers transform architectural drawings and complex tender BOQs into itemized procurement schedules with official manufacturer compliance data sheets ready for consultant sign-off.
+              </p>
+
+              <ul class="mt-6 space-y-2.5 text-xs text-[#2C3E50] border-t border-slate-100 pt-5">
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Guaranteed 2-Hour Quotation Turnaround</li>
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Consultant-Ready Material Submittal Packs</li>
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Value Engineering &amp; Alternative Sourcing</li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-500">Technical Support</span>
+              <a href="#rfq-section" class="text-xs font-extrabold text-red-600 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                Submit BOQ →
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 6: Contractor Trade Credit Facilities -->
+          <article class="service-card-feature group">
+            <span class="top-accent-bar"></span>
+            <div>
+              <div class="service-icon-box bg-slate-100 text-[#071322] border border-slate-200 shadow-sm">
+                ✓
+              </div>
+              <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#071322]">Commercial Support</p>
+              <h3 class="mt-2 text-2xl font-black text-[#071322]">Trade Credit &amp; Financing</h3>
+              <p class="mt-3 text-xs leading-6 text-[#2C3E50]">
+                We partner with established UAE contractors and builders to provide flexible 30 to 60-day revolving credit facilities, Letter of Credit (LC) fulfillment, and progressive billing linked to project milestone valuations.
+              </p>
+
+              <ul class="mt-6 space-y-2.5 text-xs text-[#2C3E50] border-t border-slate-100 pt-5">
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> 30 to 60-Day Commercial Payment Terms*</li>
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Streamlined UAE Corporate Credit Approval</li>
+                <li class="flex items-center gap-2"><span class="font-bold text-red-600">✓</span> Volume Rebates for Multi-Tower Contracts</li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-500">Corporate Accounts</span>
+              <a href="#rfq-section" class="text-xs font-extrabold text-red-600 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                Apply for Credit →
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 4. STREAMLINED 4-STEP SERVICE WORKFLOW                            -->
+    <!-- ================================================================= -->
+    <section class="bg-slate-50 px-5 py-16 sm:px-8 lg:py-24 border-t border-b border-slate-200">
+      <div class="mx-auto max-w-7xl">
+
+        <div class="mx-auto mb-14 max-w-3xl text-center">
+          <div class="mb-4 inline-flex items-center gap-3">
+            <span class="h-0.5 w-8 bg-red-600"></span>
+            <span class="text-xs font-bold uppercase tracking-[0.24em] text-red-600">How We Deliver</span>
+            <span class="h-0.5 w-8 bg-red-600"></span>
+          </div>
+
+          <h2 class="text-3xl font-black tracking-tight text-[#071322] sm:text-4xl">
+            Our 4-Step Precision Workflow
+          </h2>
+
+          <p class="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#2C3E50]">
+            From your project tender drawings to on-site crane placement, every step is calibrated for speed, compliance, and zero site interruptions.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+          <!-- Step 1 -->
+          <div class="step-card group">
+            <span class="step-number-badge">01</span>
+            <h3 class="text-xl font-black text-[#071322]">BOQ &amp; Drawings</h3>
+            <p class="mt-3 text-xs leading-6 text-[#2C3E50]">
+              You send us your bill of quantities or CAD structural drawings. Our engineers analyze specifications, quantities, and site timelines.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card group">
+            <span class="step-number-badge">02</span>
+            <h3 class="text-xl font-black text-[#071322]">Submittal &amp; Pricing</h3>
+            <p class="mt-3 text-xs leading-6 text-[#2C3E50]">
+              We prepare an itemized quote along with manufacturer technical data sheets, test reports, and municipality compliance papers.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card group">
+            <span class="step-number-badge">03</span>
+            <h3 class="text-xl font-black text-[#071322]">Fabrication &amp; Staging</h3>
+            <p class="mt-3 text-xs leading-6 text-[#2C3E50]">
+              Rebar is cut and bent, paints tinted, or materials staged in our central Al Quoz warehouse ready for immediate call-off.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-card group">
+            <span class="step-number-badge">04</span>
+            <h3 class="text-xl font-black text-[#071322]">Site Crane Offloading</h3>
+            <p class="mt-3 text-xs leading-6 text-[#2C3E50]">
+              Our crane-mounted logistics trucks deliver materials straight to your project pin, offloading precisely where your crew needs them.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 5. INTERACTIVE SERVICE REQUEST & RFQ FORM                         -->
+    <!-- ================================================================= -->
+    <section id="rfq-section" class="bg-white px-5 py-16 sm:px-8 lg:py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+
+        <!-- Left Context -->
+        <div>
+          <div class="mb-4 inline-flex items-center gap-3">
+            <span class="h-0.5 w-8 bg-red-600"></span>
+            <span class="text-xs font-bold uppercase tracking-[0.24em] text-red-600">Project Desk Direct</span>
+          </div>
+
+          <h2 class="text-3xl font-black leading-tight tracking-tight text-[#071322] sm:text-4xl lg:text-5xl">
+            Book a Service or Request
+            <span class="text-red-600">Technical Pricing</span>
+          </h2>
+
+          <p class="mt-6 text-base leading-8 text-[#2C3E50]">
+            Whether you need 200 tons of cut &amp; bend rebar, 500 drums of custom tinted exterior coatings, or a dedicated crane truck for night offloads, our Al Quoz desk is on standby.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            <div class="flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50/80 p-4">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-600 font-black text-white text-xl shadow-md shadow-red-600/20">☎</span>
+              <div>
+                <h4 class="text-xs font-black uppercase tracking-wider text-slate-500">Direct Telephone Desk</h4>
+                <a href="tel:+97140000000" class="text-base font-extrabold text-[#071322] hover:text-red-600 transition">+971 4 000 0000</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50/80 p-4">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#071322] font-black text-white text-xl">✉</span>
+              <div>
+                <h4 class="text-xs font-black uppercase tracking-wider text-slate-500">Service Quotations Email</h4>
+                <a href="mailto:info@dummycompany.com" class="text-base font-extrabold text-[#071322] hover:text-red-600 transition">info@dummycompany.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50/80 p-4">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-600 font-black text-white text-xl shadow-md">◉</span>
+              <div>
+                <h4 class="text-xs font-black uppercase tracking-wider text-slate-500">WhatsApp Dispatch Line</h4>
+                <a href="https://wa.me/971500000000" class="text-base font-extrabold text-[#071322] hover:text-green-600 transition">+971 50 000 0000</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Request Form -->
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 sm:p-10 shadow-2xl">
+          <div class="mb-6 flex items-center justify-between">
+            <div>
+              <h3 class="text-2xl font-black text-[#071322]">Service Inquiry Form</h3>
+              <p class="text-xs text-slate-500 mt-1">Fill out the details below for rapid quotation within 2 hours.</p>
+            </div>
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-100 text-red-600 font-bold">✦</span>
+          </div>
+
+          <form action="#" method="POST" class="space-y-4">
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <label class="block text-xs font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wider">Full Name *</label>
+                <input type="text" required placeholder="e.g. Tariq Mansoor" class="form-input-custom" />
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wider">Company / Contractor</label>
+                <input type="text" placeholder="e.g. Al Habtoor Contracting" class="form-input-custom" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <label class="block text-xs font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wider">Mobile Number *</label>
+                <input type="tel" required placeholder="+971 5X XXX XXXX" class="form-input-custom" />
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wider">Email Address *</label>
+                <input type="email" required placeholder="name@company.com" class="form-input-custom" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wider">Service Required *</label>
+              <select required class="form-input-custom">
+                <option value="">Select a service category</option>
+                <option value="rebar">Cut &amp; Bend Rebar Fabrication (BBS)</option>
+                <option value="tinting">Computerized Paint Tinting &amp; Color Matching</option>
+                <option value="logistics">Crane Offload &amp; Express Site Delivery</option>
+                <option value="staging">Warehousing &amp; Phased Site Staging</option>
+                <option value="boq">Technical BOQ Submittal &amp; Material Estimation</option>
+                <option value="credit">Contractor Trade Credit Application (30-60 Days)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-[#2C3E50] mb-1.5 uppercase tracking-wider">Project Location &amp; Requirements</label>
+              <textarea rows="3" placeholder="Describe required quantities, project location in UAE, and target delivery dates..." class="form-input-custom"></textarea>
+            </div>
+
+            <button type="submit"
+              class="w-full inline-flex items-center justify-center gap-3 rounded-xl bg-red-600 px-7 py-4 text-sm font-black text-white shadow-lg shadow-red-600/30 transition hover:bg-red-700">
+              Submit Service Request <span>→</span>
+            </button>
+
+            <p class="text-center text-[11px] text-slate-400 mt-2">
+              By submitting, your inquiry is routed directly to our Dubai material engineers.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 6. PROCUREMENT CTA PANEL                                          -->
+    <!-- ================================================================= -->
+    <section class="bg-white px-5 pb-16 sm:px-8 lg:pb-24">
+      <div class="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-[#071322] px-6 py-12 text-white sm:px-12 sm:py-16 lg:px-16 shadow-2xl">
+        <div class="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-red-600/20 blur-3xl"></div>
+        <div class="absolute -left-24 -bottom-24 h-96 w-96 rounded-full bg-blue-600/15 blur-3xl"></div>
+
+        <div class="relative z-10 max-w-2xl">
+          <span class="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-wider text-red-300 backdrop-blur-md">
+            Need Immediate Site Assistance?
+          </span>
+
+          <h2 class="mt-5 text-3xl font-black leading-tight tracking-tight sm:text-4xl lg:text-5xl text-white">
+            Speak Directly With Our
+            <span class="block text-red-500">Service Engineers</span>
+          </h2>
+
+          <p class="mt-5 max-w-xl text-sm sm:text-base leading-7 text-slate-300">
+            Have urgent rebar schedules, emergency site deliveries, or custom color matching requirements? Our central Dubai dispatchers are ready to assist.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="tel:+97140000000"
+              class="inline-flex items-center gap-3 rounded-full bg-red-600 px-7 py-4 text-sm font-bold text-white shadow-lg shadow-red-600/30 transition hover:-translate-y-1 hover:bg-red-700">
+              Call +971 4 000 0000 <span>→</span>
+            </a>
+
+            <a href="https://wa.me/971500000000"
+              class="inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-bold text-white backdrop-blur-sm transition hover:bg-white/15">
+              WhatsApp Our Dispatch Desk
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ================================================================= -->
+  <!-- 7. FOOTER                                                         -->
+  <!-- ================================================================= -->
+  <footer class="bg-[#061426] px-5 pb-6 pt-16 text-slate-300 lg:px-8 border-t border-white/10">
+    <div class="mx-auto max-w-7xl">
+
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+
+        <!-- Column 1: Company Profile -->
+        <div>
+          <a href="index.html" class="mb-5 inline-flex items-center gap-2">
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600 text-xl font-black text-white shadow-md">D</span>
+            <span>
+              <span class="block text-xl font-extrabold leading-none text-white">Dummy</span>
+              <span class="mt-1 block text-[9px] font-semibold tracking-wider text-slate-400 uppercase">Building Materials Trading LLC</span>
+            </span>
+          </a>
+
+          <p class="text-xs leading-6 text-slate-400 mt-3">
+            A trusted Dubai supplier of certified construction materials, electrical, plumbing, sanitaryware, paints, tools, and industrial supplies with over 10 years of Gulf excellence.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="rounded bg-white/10 px-2.5 py-1.5 text-[9px] font-semibold text-white">ISO 9001 Certified</span>
+            <span class="rounded bg-white/10 px-2.5 py-1.5 text-[9px] font-semibold text-white">DEWA Approved</span>
+            <span class="rounded bg-white/10 px-2.5 py-1.5 text-[9px] font-semibold text-white">DM Compliant</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="mb-5 text-xs font-extrabold uppercase tracking-widest text-white">Quick Links</h3>
+          <ul class="space-y-3 text-xs">
+            <li><a href="index.html" class="hover:text-red-400 transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-red-400 transition">About Us</a></li>
+            <li><a href="products.html" class="hover:text-red-400 transition">Products Catalog</a></li>
+            <li><a href="services.html" class="text-red-400 font-bold">Services &amp; Logistics</a></li>
+            <li><a href="blog.html" class="hover:text-red-400 transition">Blog &amp; Insights</a></li>
+            <li><a href="contact.html" class="hover:text-red-400 transition">Contact Us &amp; RFQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Specialized Services -->
+        <div>
+          <h3 class="mb-5 text-xs font-extrabold uppercase tracking-widest text-white">Specialized Services</h3>
+          <ul class="space-y-3 text-xs text-slate-400">
+            <li><a href="#services-grid" class="hover:text-white transition">Cut &amp; Bend Rebar (BBS)</a></li>
+            <li><a href="#services-grid" class="hover:text-white transition">Automated Paint Tinting</a></li>
+            <li><a href="#services-grid" class="hover:text-white transition">Crane Offloading Logistics</a></li>
+            <li><a href="#services-grid" class="hover:text-white transition">120,000 Sq.Ft Site Staging</a></li>
+            <li><a href="#services-grid" class="hover:text-white transition">Contractor Trade Credit</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Al Quoz Dubai -->
+        <div>
+          <h3 class="mb-5 text-xs font-extrabold uppercase tracking-widest text-white">Dubai Headquarters</h3>
+          <ul class="space-y-3.5 text-xs leading-5 text-slate-400">
+            <li class="flex items-start gap-2.5">
+              <span class="text-red-500 font-bold">⌖</span>
+              <span>First Al Khail St, Al Quoz Industrial Area, Dubai, UAE</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span class="text-red-500 font-bold">☎</span>
+              <a href="tel:+97140000000" class="hover:text-white transition">+971 4 000 0000</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span class="text-red-500 font-bold">✉</span>
+              <a href="mailto:info@dummycompany.com" class="hover:text-white transition">info@dummycompany.com</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span class="text-red-500 font-bold">⏰</span>
+              <span>Mon – Sat: 7:30 AM – 7:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-[10px] text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Dummy Building Materials Trading LLC. All rights reserved.</p>
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition">Terms of Supply</a>
+          <a href="#" class="hover:text-white transition">Site Map</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+  <a class="whatsapp-float" href="https://wa.me/971500000000" target="_blank" rel="noopener noreferrer"
+    aria-label="Chat with us on WhatsApp">
+    <span class="text-lg">◉</span>
+    <span>Chat on WhatsApp →</span>
+  </a>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Mobile navigation toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+      });
+    }
+  </script>
+
+  <!-- CraftCombine Text, Heading & Card Reveal Engine -->
+  <script src="assets/js/craft-animations.js" defer></script>
+
+</body>
+
+</html>
